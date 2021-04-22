@@ -16,12 +16,12 @@ coords = {
 url_connect = "http://admin:A456852s@127.0.0.1:5984"
 url_dbs = "http://admin:A456852s@127.0.0.1:5984/_all_dbs"
 
-today = datetime.now().strftime("%Y_%m_%d")
+that_day = "2021_04_22"
 
 mango_max = {"selector": {"_id": {"$gt": None}},"fields": ["_id"],"sort": [{ "_id": "desc" }]}
 mango_since = {"selector": {"_id": {"$gt": None}},"fields": ["_id"],"sort": [{ "_id": "asc" }]}
 
-tweet_rate = 1000
+tweet_rate = 100
 
 # Initialize API
 auth = OAuthHandler(consumer_key, consumer_secret)
@@ -35,10 +35,9 @@ couch = couchdb.Server(url_connect)
 resp = requests.get(url_dbs)
 dbs = [db.strip('[]"\n') for db in resp.text.split(",")]
 
-def harvest_tweet(db, city, tweet_rate, max_id=None, since_id=None):
+def harvest_tweet(db, city, that_day, tweet_rate, max_id=None, since_id=None):
     time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    today = datetime.now().strftime("%Y_%m_%d")
-    file_name = f"log/city/twitter-{city}-{today}.log"
+    file_name = f"log/city/twitter-{city}-{that_day}.log"
     with open(file_name, "a") as file:
         file.write("-------------------------------------------\n")
         file.write(f"Historical twitter harvest for {city} at {time} begins:\n")
@@ -64,7 +63,7 @@ def harvest_tweet(db, city, tweet_rate, max_id=None, since_id=None):
 # Harvest tweet
 if __name__ == "__main__":
     for city in coords:
-        db_name = f"twitter/city/{city}/{today}"
+        db_name = f"twitter/city/{city}/{that_day}"
         db = couch[db_name]
         since_id = next(db.find(mango_since)).id
-        harvest_tweet(db, city, tweet_rate, max_id=int(since_id)-1)
+        harvest_tweet(db, city, that_day, tweet_rate, max_id=int(since_id)-1)

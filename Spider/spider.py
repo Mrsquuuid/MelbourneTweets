@@ -9,12 +9,12 @@ access_token = '1384114156488458242-YIXcfIljLhlt1lP63jZrvpZxIRY6iE'
 access_token_secret = '5M8G2Nb2saJ46Huar40ouG9TuLpf6dwds6wncHzP6KgGk'
 
 coords = {
-    "melbourne":"-37.8300,144.9564,50km",
-    "sydney":"-33.8688,151.2093,50km",
-    "brisbane": "-27.4701,153.0211,50km",
-    "perth": "-31.9523,115.8613,50km",
-    "adelaide": "-34.9212,138.5995,50km",
-    "canberra": "-35.2820,149.1290,50km",
+    "melbourne":"01864a8a64df9dc4",
+    "sydney":"0073b76548e5984f",
+    "brisbane": "004ec16c62325149",
+    "perth": "0118c71c0ed41109",
+    "adelaide": "01e8a1a140ccdc5c",
+    "canberra": "01e4b0c84959d430",
 }
 
 url_connect = "http://admin:A456852s@127.0.0.1:5984"
@@ -46,7 +46,7 @@ def harvest_tweet(db, city, tweet_rate, max_id=None, since_id=None):
     with open(file_name, "a") as file:
         file.write("-------------------------------------------\n")
         file.write(f"Twitter harvest for {city} at {time} begins:\n")
-        tweets = Cursor(api.search, geocode=coords[city], max_id=max_id, since_id=since_id)
+        tweets = Cursor(api.search, q="place:%s" % coords[city], max_id=max_id, since_id=since_id)
         count = 1
         for item in tweets.items(tweet_rate):
             max_id = item.id_str

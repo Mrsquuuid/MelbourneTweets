@@ -8,7 +8,7 @@ consumer_secret = 'Uw3Gsd89iuQaYGMR0suuMmai2k2l3pJaHeK7mhmm6eFDm3CVJG'
 access_token = '1384114156488458242-YIXcfIljLhlt1lP63jZrvpZxIRY6iE'
 access_token_secret = '5M8G2Nb2saJ46Huar40ouG9TuLpf6dwds6wncHzP6KgGk'
 
-coord = None
+coords = None
 with open("area_code.json") as file:
     coords = json.loads(file.read())
 

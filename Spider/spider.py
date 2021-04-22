@@ -1,6 +1,6 @@
 from tweepy import OAuthHandler, Cursor, API
 from datetime import datetime
-import couchdb, requests
+import couchdb, requests, time
 
 # Constants
 consumer_key = 'g9mb54pHDFzA5aCGPsiM9Vipp'
@@ -53,11 +53,14 @@ def harvest_tweet(db, city, tweet_rate, max_id=None, since_id=None):
             json = item._json
             json["_id"] = max_id
             db.save(json)
+            if count == 1:
+                file.write(f"Starting tweet ID: {max_id}\n")
             if count % 10 == 0:
                 file.write(".")
             if count % 100 == 0:
                 file.write(f"\n{count}/{tweet_rate} tweet saved succesfully!\n")
             count += 1
+        file.write(f"Ending tweet ID: {max_id}\n")
         time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         file.write(f"Twitter harvest for {city} ends at {time}!\n")
 

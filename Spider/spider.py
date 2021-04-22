@@ -75,4 +75,4 @@ if __name__ == "__main__":
         else:
             max_id = next(db.find(mango_max)).id
             since_id = next(db.find(mango_max)).id
-            harvest_tweet(db, city, tweet_rate, since_id=max_id+1)
+            harvest_tweet(db, city, tweet_rate, since_id=int(max_id)+1)

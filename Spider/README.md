@@ -6,3 +6,5 @@
 ## spider-city-history.py:
 用于跑首府的7天之内的历史数据
 > **a.** 每一个都需要改Token，CouchDB密码和城市的Index
+> 
+> **b.** 使用Linux命令`crontab`进行定时作业，半个小时一次即可 

@@ -6,5 +6,3 @@
 ## spider-city-history.py:
 用于跑首府的7天之内的历史数据
 > **a.** 每一个都需要改Token，CouchDB密码和城市的Index
-> 
-> **b.** `spider-city-history.py`需要改`that_day`，和最旧的数据库的后缀。（即数据保存在最旧的数据库里面）

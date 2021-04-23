@@ -10,7 +10,11 @@ access_token_secret = '5M8G2Nb2saJ46Huar40ouG9TuLpf6dwds6wncHzP6KgGk'
 
 coords = {
     "sydney":"0073b76548e5984f",
-    "brisbane": "004ec16c62325149"
+    "brisbane": "004ec16c62325149",
+    "melbourne":"01864a8a64df9dc4",
+    "perth": "0118c71c0ed41109",
+    "adelaide": "01e8a1a140ccdc5c",
+    "canberra": "01e4b0c84959d430"
 }
 
 url_connect = "http://admin:A456852s@127.0.0.1:5984"

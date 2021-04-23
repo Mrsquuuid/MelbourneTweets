@@ -1,6 +1,6 @@
 from tweepy import OAuthHandler, Cursor, API
 from datetime import datetime
-import couchdb, requests, time, json
+import couchdb, json
 
 # Constants
 consumer_key = 'g9mb54pHDFzA5aCGPsiM9Vipp'
@@ -13,7 +13,6 @@ with open("area_code.json") as file:
     coords = json.loads(file.read())
 
 url_connect = "http://admin:A456852s@127.0.0.1:5984"
-url_dbs = "http://admin:A456852s@127.0.0.1:5984/_all_dbs"
 
 mango_max = {"selector": {"_id": {"$gt": None}},"fields": ["_id"],"sort": [{ "_id": "desc" }]}
 mango_since = {"selector": {"_id": {"$gt": None}},"fields": ["_id"],"sort": [{ "_id": "asc" }]}
@@ -28,10 +27,6 @@ api = API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 # Initialize couchdb
 couch = couchdb.Server(url_connect) 
 
-# Get all existing dbs
-resp = requests.get(url_dbs)
-dbs = [db.strip('[]"\n') for db in resp.text.split(",")]
-
 def harvest_tweet(db, area_code, SA, weet_rate, max_id=None, since_id=None):
     time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     file_name = f"log/suburb/twitter-{SA[0]}-{SA[1]}-{SA[2]}.log"
@@ -40,20 +35,21 @@ def harvest_tweet(db, area_code, SA, weet_rate, max_id=None, since_id=None):
         file.write(f"Twitter harvest for {SA[0]}/{SA[1]}/{SA[2]} at {time} begins:\n")
         tweets = Cursor(api.search, q="place:%s" % area_code, max_id=max_id, since_id=since_id)
         count = 1
+        twi_id = None
         for item in tweets.items(tweet_rate):
-            max_id = item.id_str
+            twi_id = item.id_str
             json = item._json
-            json["_id"] = max_id
+            json["_id"] = twi_id
             db.save(json)
             if count == 1:
-                file.write(f"Starting tweet ID: {max_id}\n")
+                file.write(f"Starting tweet ID: {twi_id}\n")
             if count % 10 == 0:
                 file.write(".")
             if count % 100 == 0:
                 file.write(f"\n{count}/{tweet_rate} tweet saved succesfully!\n")
             count += 1
         file.write(f"In total {count-1} tweets saved!\n")
-        file.write(f"Ending tweet ID: {max_id}\n")
+        file.write(f"Ending tweet ID: {twi_id}\n")
         time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         file.write(f"Twitter harvest for {SA[0]}/{SA[1]}/{SA[2]} ends at {time}!\n")
 
@@ -67,9 +63,11 @@ if __name__ == "__main__":
                 area_code = SA3_dict[SA2]
                 db_name = f"twitter/{SA4}/{SA3}/{SA2}"
                 first = False # first harvest
-                if db_name not in dbs:
+                try:
                     couch.create(db_name)
                     first = True
+                except:
+                    pass
                 db = couch[db_name]
                 if first:
                     harvest_tweet(db, area_code, (SA4, SA3, SA2), tweet_rate)

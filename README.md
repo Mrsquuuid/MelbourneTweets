@@ -37,7 +37,7 @@ sudo mkdir -p /etc/systemd/system/docker.service.d
 touch http-proxy.conf
 vim http-proxy.conf
 ~~~~
-在该文件里写入：
+在该文件里写入：(检查下引号格式)
 ~~~~
 [Service]
 Environment="HTTP_PROXY=http://wwwproxy.unimelb.edu.au:8000/"
@@ -46,7 +46,6 @@ Environment="http_proxy=http://wwwproxy.unimelb.edu.au:8000/"
 Environment="https_proxy=http://wwwproxy.unimelb.edu.au:8000/"
 Environment="no_proxy=localhost,127.0.0.1,localaddress,172.16.0.0/12,.melbourne.rc.nectar.org.au,.storage.unimelb.edu.au,.cloud.unimelb.edu.au“
 ~~~~
-检查下引号格式
 4.配置改完刷新并重启docker
 ~~~~
  sudo systemctl daemon-reload

@@ -34,6 +34,7 @@ sudo apt install vim
 reference：https://docs.docker.com/config/daemon/systemd/#httphttps-proxy
 ~~~~
 sudo mkdir -p /etc/systemd/system/docker.service.d
+cd /etc/systemd/system/docker.service.d
 touch http-proxy.conf
 vim http-proxy.conf
 ~~~~

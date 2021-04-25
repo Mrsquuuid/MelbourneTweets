@@ -59,6 +59,7 @@ sudo systemctl show --property=Environment docker
 6.测试
 ~~~~
 docker run hello-world
+docker run -d -p 5984:5984 -e COUCHDB_USER="admin" -e COUCHDB_PASSWORD=123456 ibmcom/couchdb3
 ~~~~
 
 ##Tips for installing couchdb:

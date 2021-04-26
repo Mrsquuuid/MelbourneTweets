@@ -33,7 +33,7 @@ def harvest_tweet(db, area_code, SA, weet_rate, max_id=None, since_id=None):
     with open(file_name, "a") as file:
         file.write("-------------------------------------------\n")
         file.write(f"Twitter harvest for {SA[0]}/{SA[1]}/{SA[2]} at {time} begins:\n")
-        tweets = Cursor(api.search, q="place:%s" % area_code, max_id=max_id, since_id=since_id)
+        tweets = Cursor(api.search, q="place:%s" % area_code, max_id=max_id, since_id=since_id, tweet_mode="extended")
         count = 1
         twi_id = None
         for item in tweets.items(tweet_rate):

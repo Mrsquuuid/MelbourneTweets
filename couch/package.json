@@ -1,0 +1,15 @@
+{
+  "name": "couch",
+  "version": "1.0.0",
+  "description": "Testing CouchDB design documents",
+  "author": "Qiyi Zhang",
+  "engines": {
+    "node": ">= 6.12.x",
+    "npm": ">= 3.10.x"
+  },
+  "devDependencies": {
+    "grunt": "^1.4.0",
+    "grunt-cli": "^1.4.2",
+    "grunt-couch": "^1.5.1"
+  }
+}

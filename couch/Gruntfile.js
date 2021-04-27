@@ -5,7 +5,7 @@ module.exports = function (grunt) {
         dbs: {
           files: {
             // Load the directory tree from local files and creates an JSON file
-            "/tmp/app.json": "cityInfo" 
+            "/tmp/app.json": "designs" 
           }
         }
       },

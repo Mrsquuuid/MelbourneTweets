@@ -1,4 +1,4 @@
-##Precautions for initializing Ubuntu:
+## Precautions for initializing Ubuntu:
 
 Specific process:
 
@@ -62,6 +62,13 @@ docker run hello-world
 docker run -d -p 5984:5984 -e COUCHDB_USER="admin" -e COUCHDB_PASSWORD=123456 ibmcom/couchdb3
 ~~~~
 
-##Tips for installing couchdb:
+## Tips for installing couchdb:
 1. Don't forget to modify the profile(local.ini)!
 2. If you want to start a CouchDB service with docker, https://blog.csdn.net/qq_43378019/article/details/116031996 has some useful info.
+
+## Tips for deploying flask project by gunicorn:
+There are many ways, but pip install is likely to report an error. At this time, you need to declare the proxy in the dockerfile, otherwise you cannot download the image. For example:
+~~~~
+pip install --proxy=http://wwwproxy.unimelb.edu.au:8000/ {sth you want to download}
+~~~~
+This project: 172.26.133.50:80

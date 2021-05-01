@@ -77,6 +77,6 @@ unset https_proxy
 ## 4. Tips for deploying flask project by gunicorn:
 There are many ways, but pip install is likely to report an error. At this time, you need to declare the proxy in the dockerfile, otherwise you cannot download the image. https://stackoverflow.com/questions/30992717/proxy-awareness-with-pip For example:
 ~~~~
-pip install --proxy=http://wwwproxy.unimelb.edu.au:8000/ {sth you want to download}
+pip install --proxy=http://wwwproxy.unimelb.edu.au:8000/ {sth. you want to download}
 ~~~~
 This project: 172.26.133.50:80

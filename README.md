@@ -79,4 +79,13 @@ There are many ways, but pip install is likely to report an error. At this time,
 ~~~~
 pip install --proxy=http://wwwproxy.unimelb.edu.au:8000/ {sth. you want to download}
 ~~~~
+
+## 5. Uploading files:
+~~~~
+scp -i cloud.key /Users/mac/Desktop/2.txt ubuntu@172.26.131.190:/home/ubuntu
+~~~~
+
 This project: 172.26.133.50:80
+
+
+

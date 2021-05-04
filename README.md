@@ -37,45 +37,45 @@ Aggregation Level优先选择: Greater Capital City Statistical Areas, Working Z
 
 > **1. Greater Capital City Statistical Areas (GCCSA)**：
 >
->  > **悉尼：**Greater Sydney
+>  > **悉尼**：Greater Sydney
 >  >
->  > **墨尔本：**Greater Melbourne
+>  > **墨尔本**：Greater Melbourne
 >  >
 >  > **阿德莱德**：Greater Alelaide
 >  >
->  > **珀斯：**Greater Perth
+>  > **珀斯**：Greater Perth
 >  >
->  > **堪培拉：**Australian Capital Territory 
+>  > **堪培拉**：Australian Capital Territory 
 >  >
->  > **布里斯班：**Greater Brisbane
+>  > **布里斯班**：Greater Brisbane
 >
 > **2. Working Zone**：
 >
-> > **悉尼：**Sydney & Surrounds
+> > **悉尼**：Sydney & Surrounds
 > >
 > > **墨尔本**：Melbourne & Surrounds
 > >
 > > **阿德莱德**：Alelaide & Surrounds
 > >
-> > **珀斯：**Perth & Surrounds
+> > **珀斯**：Perth & Surrounds
 > >
-> > **堪培拉：**Canberra & Surrounds
+> > **堪培拉**：Canberra & Surrounds
 > >
-> > **布里斯班：**Brisbane & Surrounds
+> > **布里斯班**：Brisbane & Surrounds
 >
 >   **3. Statistical Area 4 (SA4) **：
 >
-> > **悉尼：**Sydney + 方位
+> > **悉尼**：Sydney + 方位
 > >
-> > **墨尔本：**Melbourne + 方位
+> > **墨尔本**：Melbourne + 方位
 > >
 > > **阿德莱德**：Alelaide + 方位
 > >
-> > **珀斯：**Perth + 方位
+> > **珀斯**：Perth + 方位
 > >
-> > **堪培拉：**Australian Capital Territory
+> > **堪培拉**：Australian Capital Territory
 > >
-> > **布里斯班：**Brisbane + 方位
+> > **布里斯班**：Brisbane + 方位
 
 对于有坐标的数据的分析，使用Statistical Area 2 (SA2) 进行分析。
 

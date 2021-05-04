@@ -1,0 +1,78 @@
+farm_mgmt_age_m_provr_avg_age_yrs, farm_mgmt_srcs_inc_off_farm_empy_bsns_activ_avg_perc_pr100_, sa4_name16, farm_mgmt_data_provrs_relp_bsns_cntr_employee_num_n, farm_mgmt_data_provrs_relp_bsns_oth_num_n, farm_mgmt_data_provrs_relp_bsns_owner_operator_num_n, farm_mgmt_sex_provr_f_num_n, farm_mgmt_sex_provr_oth_num_n, sa4_code16, farm_mgmt_srcs_inc_oth_fund_srcs_avg_perc_pr100_, farm_mgmt_yrs_involved_farming_avg_yrs_yrs, farm_mgmt_sex_provr_m_num_n, farm_mgmt_srcs_inc_genertd_by_agri_prod_holding_avg_perc_pr100_, farm_mgmt_srcs_inc_grants_gov_trfs_rlf_fund_avg_perc_pr100_, farm_mgmt_age_f_provr_avg_age_yrs, farm_mgmt_age_provr_avg_age_all_p_yrs
+60,null,"Capital Region",null,60,2315,null,null,"101",6,37,1981,82,0,57,59
+57,8,"Central Coast",null,null,null,100,null,"102",1,null,null,88,null,54,56
+58,12,"Central West",null,null,3694,null,null,"103",null,39,3313,84,1,56,58
+61,null,"Coffs Harbour - Grafton",8,5,null,183,null,"104",8,37,null,75,1,60,60
+56,null,"Far West and Orana",null,89,2708,null,null,"105",null,38,2162,85,1,57,56
+60,null,"Hunter Valley exc Newcastle",89,13,1053,null,null,"106",null,37,null,79,null,60,60
+57,null,"Illawarra",null,null,29,48,null,"107",null,null,null,92,null,null,58
+62,null,"Mid North Coast",19,13,null,null,null,"108",5,38,null,79,0,58,61
+56,null,"Murray",null,null,2251,null,null,"109",null,37,2022,85,0,57,56
+58,null,"New England and North West",null,176,3995,null,null,"110",null,39,3218,86,1,57,58
+null,null,"Newcastle and Lake Macquarie",null,null,null,null,null,"111",null,32,null,null,null,null,50
+62,null,"Richmond - Tweed",42,null,1389,null,null,"112",5,34,1120,79,2,57,61
+58,12,"Riverina",null,null,3190,467,null,"113",null,39,2967,85,1,56,58
+59,16,"Southern Highlands and Shoalhaven",22,4,null,92,null,"114",null,null,null,82,null,52,57
+54,12,"Sydney - Baulkham Hills and Hawkesbury",null,13,null,101,null,"115",null,30,237,83,null,57,55
+57,null,"Sydney - Blacktown",null,null,null,8,null,"116",null,null,48,null,null,48,56
+null,null,"Sydney - Inner South West",null,null,null,null,null,"119",null,null,null,null,null,null,null
+null,null,"Sydney - North Sydney and Hornsby",null,null,null,null,null,"121",null,null,null,null,null,null,null
+63,null,"Sydney - Northern Beaches",null,null,13,null,null,"122",null,25,null,null,null,null,60
+52,6,"Sydney - Outer South West",null,null,null,83,null,"123",null,28,null,88,null,58,54
+46,7,"Sydney - Outer West and Blue Mountains",null,null,null,null,null,"124",null,23,null,78,null,42,44
+54,4,"Sydney - South West",36,7,null,null,null,"127",2,23,null,93,null,49,53
+57,null,"Ballarat",null,null,1043,null,null,"201",3,38,null,88,1,56,57
+57,null,"Bendigo",61,16,1026,181,null,"202",2,35,879,87,1,47,56
+60,null,"Geelong",26,58,null,122,null,"203",15,38,null,65,0,null,59
+62,null,"Hume",118,77,2596,null,null,"204",null,37,2185,76,0,55,60
+59,null,"Latrobe - Gippsland",25,45,3445,null,null,"205",null,37,2745,80,2,62,59
+61,null,"Melbourne - Inner South",null,null,9,null,null,"208",null,41,9,null,null,null,61
+61,15,"Melbourne - North East",6,null,132,21,null,"209",null,null,122,null,null,55,60
+60,null,"Melbourne - North West",9,null,null,17,null,"210",null,34,92,null,null,52,59
+60,7,"Melbourne - Outer East",48,33,null,96,null,"211",7,33,null,87,null,55,60
+61,null,"Melbourne - South East",31,72,null,191,null,"212",1,35,null,85,null,61,60
+54,null,"Melbourne - West",5,null,null,36,null,"213",null,35,150,97,null,55,54
+56,5,"Mornington Peninsula",null,null,null,86,null,"214",6,26,null,90,null,null,56
+57,null,"North West",null,148,3951,null,26,"215",null,37,3661,89,null,55,57
+56,null,"Shepparton",46,52,2099,null,null,"216",2,35,1723,83,0,50,55
+58,null,"Warrnambool and South West",21,55,3642,null,null,"217",3,37,3047,85,0,52,57
+56,null,"Brisbane - East",9,null,null,6,null,"301",null,31,null,null,null,null,56
+null,null,"Brisbane - North",null,null,null,null,null,"302",null,null,null,null,null,null,null
+55,null,"Brisbane - South",null,null,null,null,null,"303",null,18,13,100,null,null,55
+null,null,"Brisbane - West",null,null,null,null,null,"304",null,null,null,null,null,null,null
+60,null,"Cairns",null,57,1205,null,null,"306",null,37,1027,87,0,56,59
+56,12,"Darling Downs - Maranoa",null,null,4289,null,null,"307",null,38,3447,83,1,54,56
+57,null,"Central Queensland",null,87,2203,null,null,"308",null,40,1565,null,0,54,56
+63,16,"Gold Coast",null,null,null,null,null,"309",null,null,null,null,null,61,62
+59,21,"Ipswich",null,16,null,168,null,"310",2,38,null,77,0,50,57
+59,11,"Logan - Beaudesert",15,71,260,90,null,"311",6,null,255,null,13,null,57
+58,null,"Mackay - Isaac - Whitsunday",null,null,1787,null,null,"312",4,38,1543,85,0,55,57
+60,14,"Moreton Bay - North",15,null,null,72,null,"313",null,34,null,81,null,52,58
+60,null,"Moreton Bay - South",null,null,20,null,null,"314",null,40,null,null,null,null,63
+57,null,"Queensland - Outback",null,null,1501,586,6,"315",null,38,1129,88,null,55,56
+58,18,"Sunshine Coast",null,15,null,117,null,"316",null,null,null,null,null,56,58
+57,9,"Toowoomba",null,null,null,61,null,"317",null,39,null,87,null,63,59
+57,null,"Townsville",93,75,1139,null,null,"318",2,36,1026,88,1,54,57
+59,null,"Wide Bay",null,83,2440,null,null,"319",null,40,1968,80,1,54,58
+58,null,"Adelaide - Central and Hills",30,11,385,null,null,"401",null,34,354,77,null,58,58
+55,2,"Adelaide - North",null,null,278,null,null,"402",7,25,null,90,0,54,55
+59,10,"Adelaide - South",null,null,null,null,null,"403",null,25,null,89,null,49,56
+56,null,"Barossa - Yorke - Mid North",null,77,2528,null,null,"405",null,36,2266,90,0,53,55
+56,null,"South Australia - Outback",28,34,1219,null,null,"406",2,35,1082,91,null,50,55
+56,11,"South Australia - South East",null,null,4008,null,null,"407",null,35,3677,86,0,52,55
+57,null,"Bunbury",112,24,1382,null,null,"501",6,35,1223,77,0,59,57
+58,18,"Mandurah",7,null,null,12,null,"502",8,35,null,79,null,null,57
+61,null,"Perth - North East",null,null,null,37,null,"504",7,33,null,null,null,54,58
+56,null,"Perth - North West",null,null,null,17,null,"505",null,null,null,94,null,43,54
+60,null,"Perth - South East",11,5,null,null,null,"506",7,34,null,78,null,59,59
+56,null,"Perth - South West",11,null,55,22,null,"507",null,null,44,null,null,null,52
+56,8,"Western Australia - Wheat Belt",null,null,4443,null,null,"509",null,37,4007,89,0,57,56
+56,16,"Western Australia - Outback (North)",null,null,null,null,null,"510",null,30,null,79,null,52,55
+56,5,"Western Australia - Outback (South)",null,61,1378,null,null,"511",3,36,1172,91,0,55,55
+56,28,"Hobart",null,null,null,18,null,"601",5,32,null,null,0,null,56
+57,null,"Launceston and North East",null,50,810,null,null,"602",2,35,731,85,1,51,56
+56,null,"South East",null,null,414,null,null,"603",3,35,374,80,2,55,56
+57,null,"West and North West",null,20,846,null,null,"604",null,36,710,83,0,54,57
+55,null,"Darwin",null,null,91,30,null,"701",null,21,76,84,null,54,55
+52,11,"Northern Territory - Outback",null,null,163,81,null,"702",null,29,149,83,1,48,51
+59,18,"Australian Capital Territory",null,null,27,9,null,"801",null,30,25,76,null,52,57

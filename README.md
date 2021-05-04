@@ -63,7 +63,7 @@ Aggregation Level优先选择: Greater Capital City Statistical Areas, Working Z
 > >
 > > **布里斯班**：Brisbane & Surrounds
 >
->   **3. Statistical Area 4 (SA4) **：
+>   **3. Statistical Area 4 (SA4)**：
 >
 > > **悉尼**：Sydney + 方位
 > >

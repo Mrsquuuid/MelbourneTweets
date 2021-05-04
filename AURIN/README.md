@@ -85,4 +85,4 @@ Aggregation Level优先选择: Greater Capital City Statistical Areas, Working Z
 
 # 可用的AURIN数据:
 
-TODO
+请参考每一个文件夹`GCCSA`，`Melb_SA2`和`SA4`。文件夹标题为数据标题，`meta.json`文件有详细说明。

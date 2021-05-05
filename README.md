@@ -88,4 +88,16 @@ scp -i cloud.key /Users/mac/Desktop/2.txt ubuntu@172.26.131.190:/home/ubuntu
 This project: 172.26.133.50:80
 
 
+## 5. Environment variables on instance:
+~~~~
+declare -x -a nodes=(172.17.0.4 172.17.0.3 172.17.0.2)
+export masternode=`echo ${nodes} | cut -f1 -d' '`
+declare -x -a othernodes=`echo ${nodes[@]} | sed s/${masternode}//`
+export size=${#nodes[@]}
+export user='admin'
+export pass='admin'
+export VERSION='3.1.1'
+export cookie='a192aeb9904e6590849337933b000c99'
+~~~~
+
 

@@ -100,4 +100,5 @@ export VERSION='3.1.1'
 export cookie='a192aeb9904e6590849337933b000c99'
 ~~~~
 
-
+## 7. MRC password for ansible deployment
+ZmY0OTk5MTc2ODkxYjZi

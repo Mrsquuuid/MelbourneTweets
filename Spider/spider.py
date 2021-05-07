@@ -2,7 +2,6 @@ import couchdb
 import json
 import re
 import os
-import sys
 from shapely.geometry import Polygon, MultiPolygon, Point
 from afinn import Afinn
 from tweepy import OAuthHandler, Cursor, API
@@ -22,6 +21,7 @@ def read_grid():
         grid["melbourne"] = json.loads(file.read())["features"]
     with open("grid/sydney.json") as file:
         grid["sydney"] = json.loads(file.read())["features"]
+    return grid
         
 def read_polygons(grid):
     polygons = dict()
@@ -38,14 +38,14 @@ def read_polygons(grid):
 def read_SA2(grid):
     area_list = dict()
     for city in grid:
-        sub_area_list = []
+        sub_area_list = {}
         sub_area_list["SA2_names"] = [loc["properties"]['SA2_NAME16'] for loc in grid[city]]
         sub_area_list["SA2_codes_9_digits"] = [loc["properties"]['SA2_MAIN16'] for loc in grid[city]]
         sub_area_list["SA2_codes_5_digits"] = [loc["properties"]['SA2_5DIG16'] for loc in grid[city]]
         area_list[city] = sub_area_list
     return area_list
 
-def add_basics(this_doc, out):
+def add_basics(this_doc, out, city):
     this_text = None
     try:
         this_text = this_doc["full_text"]
@@ -53,7 +53,7 @@ def add_basics(this_doc, out):
         this_text = this_doc["text"]
     out["text"] = this_text
     out["lang"] = this_doc["lang"]
-    out["location"] = this_doc["location"]
+    out["location"] = city
     return this_text
 
 def add_time(this_doc, out):
@@ -82,9 +82,9 @@ def add_SA2(this_doc, out, polygons, area_list):
             for key in area_list[city]:
                 out[key] = area_list[city][key][index]
 
-def add_fields(this_doc, out, afinn, keywords_list, polygons, area_list): 
+def add_fields(this_doc, out, afinn, keywords_list, polygons, area_list, city): 
     # Load and add field: text, language, location
-    this_text = add_basics(this_doc, out)
+    this_text = add_basics(this_doc, out, city)
 
     # Add field: time
     add_time(this_doc, out)
@@ -103,19 +103,19 @@ def harvest_tweet(db, city, tweet_rate, max_id=None, since_id=None):
     time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     file_name = f"log/twitter-current-all.log"
     with open(file_name, "a") as file:
-        file.write("-------------------------------------------\n")
         file.write(f"Twitter harvest for {city} at begins at: {time}\n")
         tweets = Cursor(api.search, q="place:%s" % coords[city], max_id=max_id, since_id=since_id, tweet_mode="extended")
         count = 1
         for item in tweets.items(tweet_rate):
             out = dict()
             out["_id"] = item.id_str
-            add_fields(item._json, out, afinn, keywords_list, polygons, area_list)
+            add_fields(item._json, out, afinn, keywords_list, polygons, area_list, city)
             db.save(out)
             count += 1
         file.write(f"Number of tweets saved: {count-1}\n")
         time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         file.write(f"Twitter harvest for {city} ends at: {time}\n")
+        file.write("-------------------------------------------\n")
 
 # Constants
 # Twitter authentication
@@ -172,7 +172,7 @@ couch = couchdb.Server(url_connect)
 # Harvest tweet
 if __name__ == "__main__":
     # Select database
-    db_name = f"twitter/current/all"
+    db_name = "twitter/current/all"
     first = True
     try: 
         couch.create(db_name)

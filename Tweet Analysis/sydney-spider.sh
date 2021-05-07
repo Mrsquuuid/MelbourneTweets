@@ -9,7 +9,7 @@ for year in 2019 2020; do
       echo "Downloading tweets in Sydney on: ${year}/${month}/${day}"
       curl "http://45.113.232.90/couchdbro/twitter/_design/twitter/_view/summary" -G --user 'readonly:ween7ighai9gahR6' -o 'temp/twitter.json' --data-urlencode start_key=[\"sydney\",$year,$month,$day] --data-urlencode end_key=[\"sydney\",$year,$month,$day] --data-urlencode 'reduce=false' --data-urlencode 'include_docs=true'
       echo "Processing tweets in Sydney on: ${year}/${month}/${day}"
-      /opt/anaconda3/bin/python sydney-update.py $year $month $day
+      /opt/anaconda3/bin/python hist-spider.py $year $month $day "sydney"
     done
   done
 done

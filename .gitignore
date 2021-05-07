@@ -1,1 +1,5 @@
 *.DS_Store
+*.log
+twitter.json
+.test.py.swp
+.ipynb_checkpoints

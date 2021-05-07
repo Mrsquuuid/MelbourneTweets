@@ -59,6 +59,10 @@ if __name__ == "__main__":
         length = len(all_docs)
         for each_doc in all_docs:
             this_doc = dict(each_doc.doc)
+
+            # Check if is already updated
+            if ("vulgar_words" in this_doc) and ("SA2_names" in this_doc):
+                continue
             
             # Load text info
             if "full_text" in this_doc:

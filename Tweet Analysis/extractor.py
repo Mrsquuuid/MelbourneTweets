@@ -82,7 +82,10 @@ def add_SA2(this_doc, out, polygons, area_list):
 
 def add_fields(this_doc, out, afinn, keywords_list, polygons, area_list, city): 
     # Load and add field: text, language, location
-    this_text = add_basics(this_doc, out, city)
+    try:
+        this_text = add_basics(this_doc, out, city)
+    except:
+        return False
 
     # Add field: time
     add_time(this_doc, out)
@@ -96,6 +99,9 @@ def add_fields(this_doc, out, afinn, keywords_list, polygons, area_list, city):
 
     # Add field: SA2
     add_SA2(this_doc, out, polygons, area_list)
+
+    # Whether save or not
+    return True
 
 # CouchDB URL
 url_connect = "http://admin:A456852s@127.0.0.1:5984"
@@ -133,7 +139,7 @@ if __name__ == "__main__":
         db = couch[db_name]
         
         # Get all docs
-        all_docs = [i for i in db.view('_all_docs', include_docs=True)]
+        all_docs = [i for i in db.view('_all_docs', include_docs=True)][:-1]
         
         # Get each doc
         count = 1
@@ -144,8 +150,9 @@ if __name__ == "__main__":
             # Extract features
             out = dict()
             out["_id"] = this_doc["_id"]
-            add_fields(this_doc, out, afinn, keywords_list, polygons, area_list, city)
-            out_db.save(out)
+            to_save = add_fields(this_doc, out, afinn, keywords_list, polygons, area_list, city)
+            if to_save:
+                out_db.save(out)
 
             # Print log
             print(f"{count}/{length} docs processed in database: {db_name}", end='\r')

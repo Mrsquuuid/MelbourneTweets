@@ -41,7 +41,7 @@
 >
 > **数据库：**`twitter/hist/sydney/relative`
 >
-> **情景解释**：The time sereis of sentiment scores for tweets containing keywords related to China from 2019 to 2020.
+> **数据信息**：含有关键词的推文的情绪分数的时间线。The time series of sentiment scores for tweets containing keywords related to China from 2019 to 2020.
 >
 > **横坐标**：2019年到2020年的月份（共24个月），或者2019年10月到2020年9月的月份（12个月），根据排版需要来决定。
 >
@@ -61,7 +61,7 @@
 >
 > **数据库：**`twitter/hist/sydney/relative`
 >
-> **情景解释**：The time sereis of the number of tweets containing keywords related to China from 2019 to 2020.
+> **数据信息**：含有关键词的推文的数量的时间线。The time series of the number of tweets containing keywords related to China from 2019 to 2020.
 >
 > **横坐标**：2019年到2020年的月份（共24个月），或者2019年10月到2020年9月的月份（12个月），根据排版需要来决定。
 >
@@ -81,7 +81,7 @@
 >
 > **数据库：**`twitter/hist/sydney/geo`
 >
-> **情景解释**：The distribution the sentiment score for tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney. (At least 20 related tweets are requried for each SA2 location)
+> **数据信息**：不同SA2地区含有关键词的推文的情绪分数。The distribution the sentiment score for tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney. (At least 20 related tweets are requried for each SA2 location)
 >
 > **横坐标**：前五位与后五位地区名。
 >
@@ -95,7 +95,7 @@
 >
 > **数据库：**`twitter/hist/sydney/geo`
 >
-> **情景解释**：The distirbution of the number of tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney. 
+> **数据**：不同SA2地区含有关键词的推文的数量。The distirbution of the number of tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney. 
 >
 > **横坐标**：前十位地区名。
 >
@@ -109,11 +109,11 @@
 >
 > **数据库：**`twitter/hist/sydney/geo`
 >
-> **情景解释**：The correlation between sentiment score distribution for tweets made in 2019 and 2020 containing China-related keywords over each SA2 location in Sydney and the demographic characteristics and macro-economic indicator. 
+> **数据信息**：不同SA2地区含有关键词的推文的情绪分数与AURIN数据的比较。The correlation between sentiment score distribution for tweets made in 2019 and 2020 containing China-related keywords over each SA2 location in Sydney and the demographic characteristics and macro-economic indicator. 
 >
 > **横坐标**：AURIN的某项数据。图E为经济指标。图F为人口特征。
 >
-> **纵坐标**: 涉及`china_words`的 (或者Total) Average Sentiment Score。(**View:** `scenario_1/china_stats`)
+> **纵坐标**: 涉及`china_words`的Average (或者Total) Sentiment Score。(**View:** `scenario_1/china_stats`)
 
 ## c. 情景2:
 
@@ -129,7 +129,7 @@
 >
 > **数据库：**`twitter/hist/melbourne/geo`
 >
-> **情景解释**：The distirbution of the proportion of tweets containing vulgar, crime or alcohol related words over different SA2 locations in Melbourne. (At least 50 total tweets are requried for each SA2 location)
+> **数据信息**：不同SA2地区含有关键词的推文占该地区所有推文的比例。TThe distirbution of the proportion of tweets containing vulgar, crime or alcohol related words over different SA2 locations in Melbourne. (At least 50 total tweets are requried for each SA2 location)
 >
 > **横坐标**：前十位地区名。
 >
@@ -143,7 +143,7 @@
 >
 > **数据库：**`twitter/hist/melbourne/geo`
 >
-> **情景解释**：The distirbution the number of tweets containing vulgar, crime or alcohol related words over different SA2 locations in Melbourne.
+> **数据信息**：不同SA2地区含有关键词的推文的数量。The distirbution the number of tweets containing vulgar, crime or alcohol related words over different SA2 locations in Melbourne.
 >
 > **横坐标**：前十位地区名。
 >
@@ -157,7 +157,7 @@
 >
 > **数据库：**`twitter/hist/melbourne/geo`
 >
-> **情景解释**：The distribution the sentiment score for tweets over different SA2 locations in Melbourne. (At least 50 total tweets are requried for each SA2 location)
+> **数据信息**：不同SA2地区的所有推文的情绪分数。The distribution the sentiment score for tweets over different SA2 locations in Melbourne. (At least 50 total tweets are requried for each SA2 location)
 >
 > **横坐标**：**后**十位地区名。
 >
@@ -171,7 +171,7 @@
 >
 > **数据库：**`twitter/hist/melbourne/geo`
 >
-> **情景解释**：The correlation between the distribution of the sentiment score and the distirbution of the vulgar, crime or alcohol related tweets proportion over different SA2 locations in Melbourne.
+> **数据信息**：不同SA2地区的所有推文的情绪分数与含有关键词的推文的比例的比较。The correlation between the distribution of the sentiment score and the distirbution of the vulgar, crime or alcohol related tweets proportion over different SA2 locations in Melbourne.
 >
 > **横坐标**：涉及`vulgar_words`，`crime_words`和`alcohol_words`的推文的比例 (**View:** `scenario_2/bad_words_stats`)
 >
@@ -183,7 +183,7 @@
 >
 > **数据库：**`twitter/hist/melbourne/geo`
 >
-> **情景解释**：The correlation between the distirbution of the vulgar, crime or alcohol related tweets proportion over each SA2 location in Melbourne and the demographic characteristics and macro-economic indicator. (At least 20 tweets is requried for each SA2 location)
+> **数据信息**：不同SA2地区含有关键词的推文的比例与AURIN数据的比较。The correlation between the distirbution of the vulgar, crime or alcohol related tweets proportion over each SA2 location in Melbourne and the demographic characteristics and macro-economic indicator. (At least 20 tweets is requried for each SA2 location)
 >
 > **横坐标**：AURIN的某项数据。图E为经济指标。图F为人口特征。
 >
@@ -203,7 +203,7 @@
 >
 > **数据库：**`twitter/current/all`
 >
-> **情景解释**：The distirbution of the proportion of non-English tweets over the 6 major cities in Australia. 
+> **数据信息**：不同城市非英语推文的比例。The distirbution of the proportion of non-English tweets over the 6 major cities in Australia. 
 >
 > **横坐标**：城市名字（根据纵坐标从高到低）。
 >
@@ -215,7 +215,7 @@
 >
 > **数据库：**`twitter/current/all`
 >
-> **情景解释**：The correlation between distirbution of the proportion of non-English tweets and the distribution of the average sentiment score for all tweets over the 6 major cities in Australia. 
+> **数据信息**：不同城市非英语推文的比例与所有推文的情绪分数的比较。The correlation between distirbution of the proportion of non-English tweets and the distribution of the average sentiment score for all tweets over the 6 major cities in Australia. 
 >
 > **横坐标**：所有推文的Average (或者Total) Sentiment Score。 (**View:** `scenario_3/afinn_stats`)。
 >
@@ -227,7 +227,7 @@
 >
 > **数据库：**`twitter/current/all`
 >
-> **情景解释**：The correlation between the distirbution of the proportion of non-English tweets and the demographic characteristics and macro-economic indicator. 
+> **数据信息**：不同城市非英语推文的比例与AURIN数据的比较。The correlation between the distirbution of the proportion of non-English tweets and the demographic characteristics and macro-economic indicator. 
 >
 > **横坐标**：AURIN的某项数据。图C为经济指标。图D为人口特征。
 >

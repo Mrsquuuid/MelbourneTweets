@@ -49,7 +49,7 @@
 >
 > > **1.** 涉及`china_words`的Average (或者Total) Sentiment Score。(**View:** `scenario_1/china_stats`)
 > >
-> > **2.** 涉及`covid_words`和`covid_words`的Average (或者Total) Sentiment Score。(**View:** `scenario_1/china_covid_stats`)
+> > **2.** 涉及`china_words`和`covid_words`的Average (或者Total) Sentiment Score。(**View:** `scenario_1/china_covid_stats`)
 > >
 > > **3.** 涉及`china_words`和`vulgar_words`的Average (或者Total) Sentiment Score。(**View:** `scenario_1/chian_vulgar_stats`)
 > >
@@ -69,7 +69,7 @@
 >
 > > **1.** 涉及`china_words`的数量。(**View:** `scenario_1/china_stats`)
 > >
-> > **2.** 涉及`covid_words`和`covid_words`的数量。(**View:** `scenario_1/china_covid_stats`)
+> > **2.** 涉及`china_words`和`covid_words`的数量。(**View:** `scenario_1/china_covid_stats`)
 > >
 > > **3.** 涉及`china_words`和`vulgar_words`的数量。(**View:** `scenario_1/chian_vulgar_stats`)
 > >

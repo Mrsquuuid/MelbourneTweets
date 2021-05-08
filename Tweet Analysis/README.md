@@ -81,7 +81,7 @@
 >
 > **数据库：**`twitter/hist/sydney/geo`
 >
-> **情景解释：**The distribution the sentiment score for tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney. (At least 20 related tweets are requried for each SA2 location)
+> **情景解释**：The distribution the sentiment score for tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney. (At least 20 related tweets are requried for each SA2 location)
 >
 > **横坐标**：前五位与后五位地区名。
 >
@@ -95,7 +95,7 @@
 >
 > **数据库：**`twitter/hist/sydney/geo`
 >
-> **情景解释：**The distirbution of the number of tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney. 
+> **情景解释**：The distirbution of the number of tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney. 
 >
 > **横坐标**：前十位地区名。
 >
@@ -109,7 +109,7 @@
 >
 > **数据库：**`twitter/hist/sydney/geo`
 >
-> **情景解释：**The correlation between sentiment score distribution for tweets made in 2019 and 2020 containing China-related keywords over each SA2 location in Sydney and the demographic characteristics and macro-economic indicator. 
+> **情景解释**：The correlation between sentiment score distribution for tweets made in 2019 and 2020 containing China-related keywords over each SA2 location in Sydney and the demographic characteristics and macro-economic indicator. 
 >
 > **横坐标**：AURIN的某项数据。图E为经济指标。图F为人口特征。
 >
@@ -183,7 +183,7 @@
 >
 > **数据库：**`twitter/hist/melbourne/geo`
 >
-> **情景解释：**The correlation between the distirbution of the vulgar, crime or alcohol related tweets proportion over each SA2 location in Melbourne and the demographic characteristics and macro-economic indicator. (At least 20 tweets is requried for each SA2 location)
+> **情景解释**：The correlation between the distirbution of the vulgar, crime or alcohol related tweets proportion over each SA2 location in Melbourne and the demographic characteristics and macro-economic indicator. (At least 20 tweets is requried for each SA2 location)
 >
 > **横坐标**：AURIN的某项数据。图E为经济指标。图F为人口特征。
 >
@@ -227,7 +227,7 @@
 >
 > **数据库：**`twitter/current/all`
 >
-> **情景解释：**The correlation between the distirbution of the proportion of non-English tweets and the demographic characteristics and macro-economic indicator. 
+> **情景解释**：The correlation between the distirbution of the proportion of non-English tweets and the demographic characteristics and macro-economic indicator. 
 >
 > **横坐标**：AURIN的某项数据。图C为经济指标。图D为人口特征。
 >

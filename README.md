@@ -4,7 +4,7 @@
 
 ----
 
-**Nodejs**部分：`\couch`
+**Nodejs**部分：`/couch`
 
 用sh跑一个进程，通过读取本地文件夹的js文件，用`grunt-couch`在数据库上自动创建所需要的view
 
@@ -28,7 +28,7 @@ http://admin:8185050@127.0.0.1:5984/twitter%2Fhist%2Fsydney%2Frelative/_design/s
 
 ---
 
-**flask**部分：`\flask`
+**flask**部分：`/flask`
 
 根据senario的需要，调取不同的view，结合aurin数据，整理好方便画图的格式，一起发给前端（在docker中跑）
 

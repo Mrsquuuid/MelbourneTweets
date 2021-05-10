@@ -1,3 +1,7 @@
+# How to dump couchDB database to a file:
+
+点击[这里](https://stackoverflow.com/questions/11639534/couchdb-dump-to-file-and-load-from-file)。
+
 # 数据库的说明:
 
 * `twitter/current/all`: 最近一个月的6大首府的推文数据。

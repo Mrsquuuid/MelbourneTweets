@@ -37,7 +37,9 @@
 
 **Abstraction:** Since the outbreak of the epidemic, discrimination against China and even Asians has become increasingly serious around the world, including Australia. So many news have been reported during the last year that a Chinese or Asian man is abused or discriminated against by locals. This scenario aims to discovering how Chinese-Australia relationship and Australian people's views on China is influenced by the breakout of COVID-19, where the sentiment score for the tweets is used as the indicator. This scenario will also explore how the sentiment score differs by the location of different SA2 area of Sydney and how this differene is correlated with demographic characteristics and macro-economic indicator.
 
-**Data:** All tweets made during 2019-2020 in Greater Sydney. 
+**Data:** In total 42425272 Tweets, of which 291408 tweets have relative keywords.
+
+> All tweets made during 2019-2020 in Greater Sydney. 
 
 **图表A**：Line Chart
 
@@ -125,7 +127,9 @@
 
 **Abstraction:** There are hundreds of suburb in Melbourne and people always have a preference when choosing which suburb to live. Some suburbs are considered as comparably unsafe, which may be due to the frequency of criminal case or population distribution. This scenario aims to discovering which SA2 area is considered as the unsafest place in melbourne, where the proportion of tweets containing certain keywords is used as the indicator. This scenario will also explore how the result above  is correlated with demographic characteristics and economic indicator of each SA2 area.
 
-**Data:** All tweets made between 2014-2021 in Greater Melbourne. 
+**Data:** In total 42033167 Tweets, of which ... tweets are geo tagged.
+
+> All tweets made between 2014-2021 in Greater Melbourne. 
 
 **图表A**：Bar Chart
 
@@ -199,7 +203,9 @@
 
 **Abstraction:** Australia is a country of immigrants and it is also the first choice of the destination country for many immigrants at the same time. Thousands of overseas travelers come to live in Australia every year in order to obtain Australian immigration qualifications, of whom a significant number comes from non-English speaking contries.  This scenario aims to discovering which major city in Australia has most non-English speaker living there by calculating the proportion of non-English tweets made during the last month. This scenario will also explore how the result above is correlated with demographic characteristics and economic indicator of each city.
 
-**Data:** All tweets made in the latest month in Sydney, Melbourne, Brisbane, Adelaide, Perth and Canberra.
+**Data:** In total ... Tweets, of which all are geo-tagged.
+
+> All tweets made in the latest month in Sydney, Melbourne, Brisbane, Adelaide, Perth and Canberra.
 
 **图表A**：Bar Chart
 

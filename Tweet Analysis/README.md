@@ -35,7 +35,7 @@
 
 **Topic:** How Chinese-Australia relationship and Australian people's views on China is influenced by the breakout of COVID-19?
 
-**Abstraction:** Since the outbreak of the epidemic, discrimination against China and even Asians has become increasingly serious around the world, including Australia. So many news have been reported during the last year that a Chinese or Asian man is abused or discriminated against by locals. This scenario aims to discovering how Chinese-Australia relationship and Australian people's views on China is influenced by the breakout of COVID-19, where the sentiment score for the tweets is used as the indicator. This scenario will also explore how the sentiment score differs by the location of different SA2 area of Sydney and how this differene is correlated with demographic characteristics and macro-economic indicator.
+**Abstraction:** Since the outbreak of the epidemic, discrimination against China and even Asians has become increasingly serious around the world, including Australia. So many news have been reported during the last year that a Chinese or Asian man is abused or discriminated against by locals. This scenario aims to discovering how Chinese-Australia relationship and Australian people's views on China is influenced by the breakout of COVID-19, where the sentiment score for the tweets is used as the indicator. This scenario will also explore how the sentiment score differs by the location of different SA2 area of Sydney and how this difference is correlated with demographic characteristics and macro-economic indicator.
 
 **Data:** In total 42425272 Tweets, of which 291408 tweets have relative keywords.
 
@@ -87,7 +87,7 @@
 >
 > **数据库：**`twitter/hist/sydney/geo`
 >
-> **数据信息**：不同SA2地区含有关键词的推文的情绪分数。The distribution the sentiment score for tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney. (At least 20 related tweets are requried for each SA2 location)
+> **数据信息**：不同SA2地区含有关键词的推文的情绪分数。The distribution the sentiment score for tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney. (At least 20 related tweets are required for each SA2 location)
 >
 > **横坐标**：前五位与后五位地区名。
 >
@@ -101,7 +101,7 @@
 >
 > **数据库：**`twitter/hist/sydney/geo`
 >
-> **数据**：不同SA2地区含有关键词的推文的数量。The distirbution of the number of tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney. 
+> **数据**：不同SA2地区含有关键词的推文的数量。The distribution of the number of tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney. 
 >
 > **横坐标**：前十位地区名。
 >
@@ -125,9 +125,9 @@
 
 **Topic:** Which suburb is considered as most unsafe place in Melbourne ?
 
-**Abstraction:** There are hundreds of suburb in Melbourne and people always have a preference when choosing which suburb to live. Some suburbs are considered as comparably unsafe, which may be due to the frequency of criminal case or population distribution. This scenario aims to discovering which SA2 area is considered as the unsafest place in melbourne, where the proportion of tweets containing certain keywords is used as the indicator. This scenario will also explore how the result above  is correlated with demographic characteristics and economic indicator of each SA2 area.
+**Abstraction:** There are hundreds of suburb in Melbourne and people always have a preference when choosing which suburb to live. Some suburbs are considered as comparably unsafe, which may be due to the frequency of criminal case or population distribution. This scenario aims to discovering which SA2 area is considered as the unsafest place in Melbourne, where the proportion of tweets containing certain keywords is used as the indicator. This scenario will also explore how the result above  is correlated with demographic characteristics and economic indicator of each SA2 area.
 
-**Data:** In total 42033167 Tweets, of which ... tweets are geo tagged.
+**Data:** In total 42033167 Tweets, of which 622872 tweets are geo tagged.
 
 > All tweets made between 2014-2021 in Greater Melbourne. 
 
@@ -137,7 +137,7 @@
 >
 > **数据库：**`twitter/hist/melbourne/geo`
 >
-> **数据信息**：不同SA2地区含有关键词的推文占该地区所有推文的比例。TThe distirbution of the proportion of tweets containing vulgar, crime or alcohol related words over different SA2 locations in Melbourne. (At least 50 total tweets are requried for each SA2 location)
+> **数据信息**：不同SA2地区含有关键词的推文占该地区所有推文的比例。The distribution of the proportion of tweets containing vulgar, crime or alcohol related words over different SA2 locations in Melbourne. (At least 50 total tweets are required for each SA2 location)
 >
 > **横坐标**：前十位地区名。
 >
@@ -151,7 +151,7 @@
 >
 > **数据库：**`twitter/hist/melbourne/geo`
 >
-> **数据信息**：不同SA2地区含有关键词的推文的数量。The distirbution the number of tweets containing vulgar, crime or alcohol related words over different SA2 locations in Melbourne.
+> **数据信息**：不同SA2地区含有关键词的推文的数量。The distribution the number of tweets containing vulgar, crime or alcohol related words over different SA2 locations in Melbourne.
 >
 > **横坐标**：前十位地区名。
 >
@@ -165,7 +165,7 @@
 >
 > **数据库：**`twitter/hist/melbourne/geo`
 >
-> **数据信息**：不同SA2地区的所有推文的情绪分数。The distribution the sentiment score for tweets over different SA2 locations in Melbourne. (At least 50 total tweets are requried for each SA2 location)
+> **数据信息**：不同SA2地区的所有推文的情绪分数。The distribution the sentiment score for tweets over different SA2 locations in Melbourne. (At least 50 total tweets are required for each SA2 location)
 >
 > **横坐标**：**后**十位地区名。
 >
@@ -179,7 +179,7 @@
 >
 > **数据库：**`twitter/hist/melbourne/geo`
 >
-> **数据信息**：不同SA2地区的所有推文的情绪分数与含有关键词的推文的比例的比较。The correlation between the distribution of the sentiment score and the distirbution of the vulgar, crime or alcohol related tweets proportion over different SA2 locations in Melbourne.
+> **数据信息**：不同SA2地区的所有推文的情绪分数与含有关键词的推文的比例的比较。The correlation between the distribution of the sentiment score and the distribution of the vulgar, crime or alcohol related tweets proportion over different SA2 locations in Melbourne.
 >
 > **横坐标**：涉及`vulgar_words`，`crime_words`和`alcohol_words`的推文的比例 (**View:** `scenario_2/bad_words_stats`)
 >
@@ -191,7 +191,7 @@
 >
 > **数据库：**`twitter/hist/melbourne/geo`
 >
-> **数据信息**：不同SA2地区含有关键词的推文的比例与AURIN数据的比较。The correlation between the distirbution of the vulgar, crime or alcohol related tweets proportion over each SA2 location in Melbourne and the demographic characteristics and macro-economic indicator. (At least 20 tweets is requried for each SA2 location)
+> **数据信息**：不同SA2地区含有关键词的推文的比例与AURIN数据的比较。The correlation between the distribution of the vulgar, crime or alcohol related tweets proportion over each SA2 location in Melbourne and the demographic characteristics and macro-economic indicator. (At least 20 tweets is required for each SA2 location)
 >
 > **横坐标**：AURIN的某项数据。图E为经济指标。图F为人口特征。
 >
@@ -201,9 +201,9 @@
 
 **Topic:** Which major city in Australia do non-English speaking immigrants favour most?
 
-**Abstraction:** Australia is a country of immigrants and it is also the first choice of the destination country for many immigrants at the same time. Thousands of overseas travelers come to live in Australia every year in order to obtain Australian immigration qualifications, of whom a significant number comes from non-English speaking contries.  This scenario aims to discovering which major city in Australia has most non-English speaker living there by calculating the proportion of non-English tweets made during the last month. This scenario will also explore how the result above is correlated with demographic characteristics and economic indicator of each city.
+**Abstraction:** Australia is a country of immigrants and it is also the first choice of the destination country for many immigrants at the same time. Thousands of overseas travellers come to live in Australia every year in order to obtain Australian immigration qualifications, of whom a significant number comes from non-English speaking countries.  This scenario aims to discovering which major city in Australia has most non-English speaker living there by calculating the proportion of non-English tweets made during the last month. This scenario will also explore how the result above is correlated with demographic characteristics and economic indicator of each city.
 
-**Data:** In total ... Tweets, of which all are geo-tagged.
+**Data:** In total 233689 Tweets, of which all are geo-tagged.
 
 > All tweets made in the latest month in Sydney, Melbourne, Brisbane, Adelaide, Perth and Canberra.
 
@@ -213,7 +213,7 @@
 >
 > **数据库：**`twitter/current/all`
 >
-> **数据信息**：不同城市非英语推文的比例。The distirbution of the proportion of non-English tweets over the 6 major cities in Australia. 
+> **数据信息**：不同城市非英语推文的比例。The distribution of the proportion of non-English tweets over the 6 major cities in Australia. 
 >
 > **横坐标**：城市名字（根据纵坐标从高到低）。
 >
@@ -225,7 +225,7 @@
 >
 > **数据库：**`twitter/current/all`
 >
-> **数据信息**：不同城市非英语推文的比例与所有推文的情绪分数的比较。The correlation between distirbution of the proportion of non-English tweets and the distribution of the average sentiment score for all tweets over the 6 major cities in Australia. 
+> **数据信息**：不同城市非英语推文的比例与所有推文的情绪分数的比较。The correlation between distribution of the proportion of non-English tweets and the distribution of the average sentiment score for all tweets over the 6 major cities in Australia. 
 >
 > **横坐标**：所有推文的Average (或者Total) Sentiment Score。 (**View:** `scenario_3/afinn_stats`)。
 >
@@ -237,7 +237,7 @@
 >
 > **数据库：**`twitter/current/all`
 >
-> **数据信息**：不同城市非英语推文的比例与AURIN数据的比较。The correlation between the distirbution of the proportion of non-English tweets and the demographic characteristics and macro-economic indicator. 
+> **数据信息**：不同城市非英语推文的比例与AURIN数据的比较。The correlation between the distribution of the proportion of non-English tweets and the demographic characteristics and macro-economic indicator. 
 >
 > **横坐标**：AURIN的某项数据。图C为经济指标。图D为人口特征。
 >

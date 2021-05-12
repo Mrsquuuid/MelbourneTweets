@@ -4,7 +4,7 @@ Specific process:
 
 1. Modify the environment configuration file：
 ~~~~
-vim /etc/environment
+vi /etc/environment
 ~~~~
 Add the following configuration
 ~~~~

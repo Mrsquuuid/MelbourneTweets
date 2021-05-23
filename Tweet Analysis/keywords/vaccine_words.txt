@@ -1,5 +1,0 @@
-vaccine
-pfizer
-biontech
-oxford
-astrazeneca

@@ -1,8 +1,9 @@
 <template>
 	<div class="chart">
 		<div id="main" style="width: 100%; height: 100%;">
-			<div id="loading" style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
-				<img src="../assets/loading.gif" width="10%" height="auto"/>
+			<div id="loading"
+				style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+				<img src="../assets/loading.gif" width="10%" height="auto" />
 			</div>
 		</div>
 	</div>
@@ -56,7 +57,7 @@
 						showDelay: 0,
 						formatter: function(params) {
 							if (params.value.length > 1) {
-								return params.seriesName + ' :<br/>' + 'Afinn average: ' +
+								return 'Afinn average: ' +
 									params.value[0] + '<br/>' + 'Bad word average: ' +
 									params.value[1];
 							}
@@ -70,12 +71,11 @@
 					xAxis: {},
 					yAxis: {},
 					series: [{
-							name: 'Suburb',
-							symbolSize: 10,
-							data: this.set,
-							type: 'scatter'
-						}
-					]
+						name: 'Suburb',
+						symbolSize: 10,
+						data: this.set,
+						type: 'scatter'
+					}]
 				};
 				chart.setOption(option);
 			}

@@ -22,7 +22,7 @@
 			fetch() {
 				var self = this;
 				$.ajax({
-					url: "http://172.26.133.50/s1/ef",
+					url: "http://172.26.129.23/s1/ef",
 					type: "GET",
 					dataType: "json",
 					success: function(data) {

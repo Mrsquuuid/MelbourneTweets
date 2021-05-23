@@ -1,0 +1,304 @@
+sa2_name16, availability_status, ogc_fid, state, sa2_code16, number_participants
+"Burwood East","Available",668,"VIC","207031166",140
+"Bentleigh East (North)","Available",672,"VIC","208021426",116
+"Prahran - Windsor","Available",661,"VIC","206061136",165
+"Collingwood","Available",875,"VIC","206071141",103
+"Hadfield","Available",786,"VIC","210031440",91
+"Sunbury","Available",930,"VIC","210041240",173
+"Sunbury - South","Available",761,"VIC","210041241",410
+"Fitzroy","Available",876,"VIC","206071142",97
+"Hughesdale","Available",671,"VIC","208021180",56
+"Point Cook - South","Available",613,"VIC","213051466",97
+"Blackburn South","Available",592,"VIC","207031162",168
+"Surrey Hills (East) - Mont Albert","Available",888,"VIC","207031167",85
+"Brighton East","Available",890,"VIC","208011170",120
+"Cheltenham - Highett (West)","Available",891,"VIC","208011171",116
+"Hampton","Available",892,"VIC","208011172",197
+"Brunswick","Available",653,"VIC","206011105",219
+"Brunswick East","Available",654,"VIC","206011106",62
+"Pascoe Vale South","Available",860,"VIC","206011109",107
+"Docklands","Available",864,"VIC","206041118",36
+"East Melbourne","Available",865,"VIC","206041119",null
+"Fitzroy North","Available",877,"VIC","206071143",111
+"Richmond (Vic.)","Available",662,"VIC","206071144",231
+"Yarra - North","Available",878,"VIC","206071145",179
+"South Yarra - West","Available",868,"VIC","206041125",null
+"Bentleigh East (South)","Available",673,"VIC","208021427",108
+"Bentleigh - McKinnon","Available",596,"VIC","208021174",222
+"Aspendale Gardens - Waterways","Available",896,"VIC","208031183",82
+"Murrumbeena","Available",894,"VIC","208021181",86
+"Southbank","Available",585,"VIC","206041126",null
+"Chelsea Heights","Available",898,"VIC","208031187",57
+"Carnegie","Available",669,"VIC","208021176",166
+"Coburg","Available",859,"VIC","206011108",281
+"Brunswick West","Available",858,"VIC","206011107",164
+"Alphington - Fairfield","Available",861,"VIC","206021110",147
+"Ormond - Glen Huntly","Available",895,"VIC","208021182",129
+"Northcote","Available",584,"VIC","206021111",247
+"Cheltenham - Highett (East)","Available",899,"VIC","208031188",254
+"Thornbury","Available",862,"VIC","206021112",221
+"Port Melbourne","Available",659,"VIC","206051130",120
+"Ascot Vale","Available",655,"VIC","206031113",117
+"Essendon - Aberfeldie","Available",776,"VIC","206031114",169
+"Flemington","Available",863,"VIC","206031115",83
+"Moonee Ponds","Available",656,"VIC","206031116",119
+"Carlton","Available",810,"VIC","206041117",85
+"Kensington (Vic.)","Available",866,"VIC","206041121",73
+"Melbourne","Available",657,"VIC","206041122",128
+"Armadale","Available",872,"VIC","206061135",57
+"North Melbourne","Available",658,"VIC","206041123",104
+"Parkville","Available",867,"VIC","206041124",32
+"Albert Park","Available",869,"VIC","206051128",85
+"Elwood","Available",870,"VIC","206051129",77
+"Port Melbourne Industrial","Available",871,"VIC","206051131",null
+"South Melbourne","Available",586,"VIC","206051132",110
+"St Kilda","Available",587,"VIC","206051133",221
+"St Kilda East","Available",660,"VIC","206051134",156
+"South Yarra - East","Available",777,"VIC","206061137",91
+"Toorak","Available",873,"VIC","206061138",53
+"Abbotsford","Available",588,"VIC","206071139",60
+"Carlton North - Princes Hill","Available",874,"VIC","206071140",51
+"Ashburton (Vic.)","Available",879,"VIC","207011146",101
+"Balwyn","Available",589,"VIC","207011147",126
+"Camberwell","Available",778,"VIC","207011149",162
+"Surrey Hills (West) - Canterbury","Available",665,"VIC","207011155",104
+"Bulleen","Available",883,"VIC","207021156",132
+"Doncaster","Available",884,"VIC","207021157",211
+"Templestowe","Available",758,"VIC","207021159",134
+"Balwyn North","Available",880,"VIC","207011148",141
+"Kew","Available",664,"VIC","207011153",303
+"Glen Iris - East","Available",881,"VIC","207011150",125
+"Hawthorn","Available",663,"VIC","207011151",161
+"Hawthorn East","Available",590,"VIC","207011152",121
+"Kew East","Available",882,"VIC","207011154",60
+"Templestowe Lower","Available",885,"VIC","207021160",160
+"Box Hill","Available",667,"VIC","207031163",231
+"Doncaster East (North)","Available",666,"VIC","207021424",132
+"Doncaster East (South)","Available",886,"VIC","207021425",136
+"Blackburn","Available",591,"VIC","207031161",274
+"Caulfield - North","Available",670,"VIC","208021177",153
+"Burwood","Available",593,"VIC","207031165",116
+"Box Hill North","Available",887,"VIC","207031164",208
+"Beaumaris","Available",594,"VIC","208011168",86
+"Caulfield - South","Available",779,"VIC","208021178",152
+"Brighton (Vic.)","Available",889,"VIC","208011169",91
+"Elsternwick","Available",893,"VIC","208021179",82
+"Sandringham - Black Rock","Available",595,"VIC","208011173",87
+"Carrum - Patterson Lakes","Available",897,"VIC","208031185",112
+"Chelsea - Bonbeach","Available",674,"VIC","208031186",157
+"Mentone","Available",900,"VIC","208031190",140
+"Moorabbin - Heatherton","Available",780,"VIC","208031191",129
+"Greensborough","Available",599,"VIC","209011197",305
+"Edithvale - Aspendale","Available",597,"VIC","208031189",135
+"Bundoora - East","Available",901,"VIC","209011196",157
+"Reservoir - East","Available",679,"VIC","209021207",481
+"Reservoir - West","Available",680,"VIC","209021208",431
+"Watsonia","Available",678,"VIC","209011204",243
+"Mordialloc - Parkdale","Available",675,"VIC","208031193",201
+"Kingsbury","Available",600,"VIC","209021205",92
+"Malvern - Glen Iris","Available",676,"VIC","208041194",106
+"Preston - West","Available",905,"VIC","209021429",138
+"Altona Meadows","Available",981,"VIC","213021342",194
+"Malvern East","Available",598,"VIC","208041195",157
+"Eltham","Available",682,"VIC","209031209",292
+"Hurstbridge","Available",906,"VIC","209031210",47
+"Kinglake","Available",907,"VIC","209031211",33
+"Panton Hill - St Andrews","Available",908,"VIC","209031212",48
+"Plenty - Yarrambat","Available",782,"VIC","209031213",103
+"Research - North Warrandyte","Available",783,"VIC","209031214",74
+"Heidelberg - Rosanna","Available",759,"VIC","209011198",193
+"Bundoora - West","Available",911,"VIC","209041217",69
+"Lalor","Available",912,"VIC","209041219",317
+"Heidelberg West","Available",677,"VIC","209011199",402
+"Ivanhoe","Available",902,"VIC","209011200",133
+"Ivanhoe East - Eaglemont","Available",903,"VIC","209011201",59
+"Montmorency - Briar Hill","Available",904,"VIC","209011202",228
+"Viewbank - Yallambie","Available",781,"VIC","209011203",266
+"Preston - East","Available",681,"VIC","209021428",398
+"Wattle Glen - Diamond Creek","Available",909,"VIC","209031215",201
+"Epping - East","Available",784,"VIC","209041431",191
+"Epping - South","Available",811,"VIC","209041432",175
+"Bundoora - North","Available",910,"VIC","209041216",137
+"Epping - West","Available",918,"VIC","209041433",122
+"Mernda","Available",684,"VIC","209041434",266
+"South Morang (North)","Available",919,"VIC","209041435",150
+"Mill Park - North","Available",913,"VIC","209041220",217
+"Mill Park - South","Available",914,"VIC","209041221",167
+"Airport West","Available",921,"VIC","210011226",77
+"Thomastown","Available",915,"VIC","209041223",284
+"Wallan","Available",916,"VIC","209041224",155
+"Whittlesea","Available",917,"VIC","209041225",114
+"Doreen","Available",683,"VIC","209041430",349
+"South Morang (South)","Available",920,"VIC","209041436",163
+"Wollert","Available",685,"VIC","209041437",124
+"Keilor","Available",922,"VIC","210011228",77
+"Keilor East","Available",923,"VIC","210011229",190
+"Niddrie - Essendon West","Available",785,"VIC","210011230",55
+"Strathmore","Available",924,"VIC","210011231",76
+"Gisborne","Available",760,"VIC","210021232",156
+"Cranbourne","Available",606,"VIC","212031300",322
+"Cranbourne East","Available",711,"VIC","212031301",305
+"Macedon","Available",925,"VIC","210021233",26
+"Riddells Creek","Available",926,"VIC","210021234",34
+"Romsey","Available",686,"VIC","210021235",120
+"Coburg North","Available",927,"VIC","210031236",98
+"Fawkner","Available",687,"VIC","210031237",176
+"Glenroy","Available",688,"VIC","210031438",362
+"Pascoe Vale","Available",928,"VIC","210031239",234
+"Gowanbrae","Available",929,"VIC","210031439",29
+"Broadmeadows","Available",689,"VIC","210051242",305
+"Meadow Heights","Available",932,"VIC","210051247",251
+"Campbellfield - Coolaroo","Available",787,"VIC","210051243",252
+"Gladstone Park - Westmeadows","Available",762,"VIC","210051245",200
+"Greenvale - Bulla","Available",931,"VIC","210051246",166
+"Croydon South","Available",945,"VIC","211031452",105
+"Roxburgh Park - Somerton","Available",690,"VIC","210051249",301
+"Tullamarine","Available",933,"VIC","210051250",78
+"Craigieburn - Central","Available",934,"VIC","210051441",111
+"Craigieburn - North","Available",601,"VIC","210051442",133
+"Craigieburn - West","Available",692,"VIC","210051444",203
+"Mickleham - Yuroke","Available",693,"VIC","210051445",99
+"Bayswater","Available",935,"VIC","211011251",211
+"Knoxfield - Scoresby","Available",694,"VIC","211011254",185
+"Craigieburn - South","Available",691,"VIC","210051443",216
+"Lysterfield","Available",788,"VIC","211011255",54
+"Rowville - North","Available",936,"VIC","211011257",92
+"Rowville - South","Available",696,"VIC","211011258",80
+"Wantirna","Available",937,"VIC","211011259",163
+"Wantirna South","Available",938,"VIC","211011260",200
+"Rowville - Central","Available",695,"VIC","211011256",146
+"Boronia","Available",697,"VIC","211011446",416
+"Ferntree Gully (North)","Available",939,"VIC","211011447",259
+"Croydon Hills - Warranwood","Available",943,"VIC","211031265",244
+"Ringwood","Available",602,"VIC","211031266",339
+"Ferntree Gully (South) - Upper Ferntree Gully","Available",812,"VIC","211011448",200
+"Ringwood East","Available",698,"VIC","211031267",375
+"Ringwood North","Available",944,"VIC","211031268",115
+"The Basin","Available",940,"VIC","211011449",50
+"Donvale - Park Orchards","Available",941,"VIC","211021261",160
+"Warrandyte - Wonga Park","Available",789,"VIC","211021262",83
+"Croydon - East","Available",790,"VIC","211031450",289
+"Croydon - West","Available",763,"VIC","211031451",257
+"Bayswater North","Available",942,"VIC","211031263",224
+"Forest Hill","Available",699,"VIC","211041269",126
+"Mitcham (Vic.)","Available",700,"VIC","211041270",251
+"Vermont","Available",701,"VIC","211041272",151
+"Vermont South","Available",702,"VIC","211041273",99
+"Nunawading","Available",946,"VIC","211041271",213
+"Belgrave - Selby","Available",947,"VIC","211051274",99
+"Chirnside Park","Available",948,"VIC","211051275",147
+"Healesville - Yarra Glen","Available",949,"VIC","211051276",185
+"Kilsyth","Available",950,"VIC","211051277",136
+"Lilydale - Coldstream","Available",764,"VIC","211051278",322
+"Monbulk - Silvan","Available",951,"VIC","211051279",59
+"Montrose","Available",952,"VIC","211051280",77
+"Mooroolbark","Available",703,"VIC","211051281",407
+"Mount Dandenong - Olinda","Available",791,"VIC","211051282",103
+"Pakenham - North","Available",605,"VIC","212011291",248
+"Mount Evelyn","Available",603,"VIC","211051283",178
+"Endeavour Hills - South","Available",793,"VIC","212021454",108
+"Lynbrook - Lyndhurst","Available",712,"VIC","212031306",119
+"Pearcedale - Tooradin","Available",960,"VIC","212031308",72
+"Upwey - Tecoma","Available",953,"VIC","211051284",102
+"Wandin - Seville","Available",704,"VIC","211051285",79
+"Yarra Valley","Available",604,"VIC","211051286",242
+"Beaconsfield - Officer","Available",813,"VIC","212011287",151
+"Bunyip - Garfield","Available",705,"VIC","212011288",64
+"Emerald - Cockatoo","Available",954,"VIC","212011289",153
+"Koo Wee Rup","Available",955,"VIC","212011290",75
+"Pakenham - South","Available",706,"VIC","212011292",348
+"Berwick - North","Available",814,"VIC","212021293",203
+"Berwick - South","Available",707,"VIC","212021294",232
+"Doveton","Available",956,"VIC","212021295",173
+"Hallam","Available",708,"VIC","212021297",116
+"Narre Warren North","Available",709,"VIC","212021299",70
+"Endeavour Hills - North","Available",792,"VIC","212021453",120
+"Narre Warren - North East","Available",957,"VIC","212021455",126
+"Narre Warren - South West","Available",710,"VIC","212021456",177
+"Cranbourne North","Available",765,"VIC","212031302",220
+"Cranbourne South","Available",607,"VIC","212031303",98
+"Cranbourne West","Available",958,"VIC","212031304",169
+"Hampton Park - Lynbrook","Available",959,"VIC","212031305",253
+"Narre Warren South (East)","Available",961,"VIC","212031457",131
+"Narre Warren South (West)","Available",962,"VIC","212031458",206
+"Clarinda - Oakleigh South","Available",963,"VIC","212041309",151
+"Clayton South","Available",964,"VIC","212041310",119
+"Dandenong","Available",766,"VIC","212041311",416
+"Dandenong North","Available",608,"VIC","212041312",273
+"Dingley Village","Available",965,"VIC","212041313",99
+"Noble Park - East","Available",794,"VIC","212041459",151
+"Keysborough","Available",966,"VIC","212041314",210
+"Noble Park North","Available",713,"VIC","212041316",83
+"Springvale","Available",967,"VIC","212041317",157
+"Springvale South","Available",968,"VIC","212041318",111
+"Noble Park - West","Available",795,"VIC","212041460",184
+"Ashwood - Chadstone","Available",796,"VIC","212051319",302
+"Clayton","Available",969,"VIC","212051320",165
+"Glen Waverley - East","Available",970,"VIC","212051321",163
+"Glen Waverley - West","Available",971,"VIC","212051322",184
+"Mount Waverley - North","Available",714,"VIC","212051323",126
+"Mount Waverley - South","Available",815,"VIC","212051324",204
+"Mulgrave","Available",972,"VIC","212051325",195
+"Oakleigh - Huntingdale","Available",973,"VIC","212051326",212
+"Wheelers Hill","Available",974,"VIC","212051327",145
+"Ardeer - Albion","Available",975,"VIC","213011328",77
+"Cairnlea","Available",715,"VIC","213011329",104
+"Keilor Downs","Available",717,"VIC","213011332",136
+"Deer Park - Derrimut","Available",716,"VIC","213011330",297
+"Delahey","Available",976,"VIC","213011331",78
+"Kings Park (Vic.)","Available",977,"VIC","213011333",162
+"St Albans - North","Available",797,"VIC","213011334",233
+"Altona North","Available",982,"VIC","213021343",104
+"St Albans - South","Available",718,"VIC","213011335",192
+"Sunshine North","Available",979,"VIC","213011337",115
+"Sunshine","Available",978,"VIC","213011336",95
+"Sydenham","Available",719,"VIC","213011339",123
+"Sunshine West","Available",980,"VIC","213011338",169
+"Taylors Lakes","Available",720,"VIC","213011340",128
+"Altona","Available",721,"VIC","213021341",127
+"Newport","Available",722,"VIC","213021344",121
+"Seabrook","Available",723,"VIC","213021345",43
+"Williamstown","Available",983,"VIC","213021346",108
+"West Footscray - Tottenham","Available",724,"VIC","213031351",100
+"Braybrook","Available",798,"VIC","213031347",207
+"Footscray","Available",799,"VIC","213031348",135
+"Maribyrnong","Available",609,"VIC","213031349",74
+"Seddon - Kingsville","Available",610,"VIC","213031350",60
+"Yarraville","Available",984,"VIC","213031352",94
+"Bacchus Marsh","Available",985,"VIC","213041353",326
+"Hillside","Available",767,"VIC","213041355",174
+"Melton","Available",725,"VIC","213041356",339
+"Melton South","Available",611,"VIC","213041357",342
+"Melton West","Available",726,"VIC","213041358",266
+"Rockbank - Mount Cottrell","Available",986,"VIC","213041359",33
+"Taylors Hill","Available",727,"VIC","213041360",167
+"Burnside","Available",987,"VIC","213041461",35
+"Hoppers Crossing - South","Available",729,"VIC","213051362",186
+"Burnside Heights","Available",988,"VIC","213041462",54
+"Caroline Springs","Available",989,"VIC","213041463",130
+"Hoppers Crossing - North","Available",728,"VIC","213051361",185
+"Laverton","Available",990,"VIC","213051363",67
+"Tarneit","Available",612,"VIC","213051365",254
+"Truganina","Available",730,"VIC","213051366",141
+"Werribee - South","Available",731,"VIC","213051368",117
+"Wyndham Vale","Available",800,"VIC","213051369",271
+"Point Cook - East","Available",732,"VIC","213051464",97
+"Point Cook - North","Available",733,"VIC","213051465",166
+"Werribee - East","Available",734,"VIC","213051467",218
+"Werribee - West","Available",614,"VIC","213051468",150
+"Carrum Downs","Available",991,"VIC","214011370",292
+"Frankston","Available",801,"VIC","214011371",474
+"Frankston North","Available",735,"VIC","214011372",382
+"Frankston South","Available",992,"VIC","214011373",167
+"Langwarrin","Available",993,"VIC","214011374",275
+"Seaford (Vic.)","Available",994,"VIC","214011375",218
+"Skye - Sandhurst","Available",995,"VIC","214011376",166
+"Dromana","Available",996,"VIC","214021377",123
+"Flinders","Available",997,"VIC","214021378",79
+"Hastings - Somers","Available",615,"VIC","214021379",294
+"Mornington","Available",998,"VIC","214021380",326
+"Mount Eliza","Available",999,"VIC","214021381",128
+"Mount Martha","Available",1000,"VIC","214021382",137
+"Point Nepean","Available",1001,"VIC","214021383",138
+"Rosebud - McCrae","Available",1002,"VIC","214021384",274
+"Somerville","Available",616,"VIC","214021385",203

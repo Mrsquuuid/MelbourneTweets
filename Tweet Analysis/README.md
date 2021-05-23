@@ -1,37 +1,24 @@
 # How to dump couchDB database to a file:
 
-点击[这里](https://stackoverflow.com/questions/11639534/couchdb-dump-to-file-and-load-from-file)。
+Click [here](https://stackoverflow.com/questions/11639534/couchdb-dump-to-file-and-load-from-file).
 
-# 数据库的说明:
+# Databases:
 
-* `twitter/current/all`: 最近一个月的6大首府的推文数据。
-
-* `twitter/hist/sydney/geo`: 2019-2020悉尼地区所有含有坐标信息的推文数据。(少部分推文可能也会没有SA2信息，因为不在大悉尼范围之内)
-
-* `twitter/hist/sydney/relative`: 2019-2020悉尼地区至少含有一个关键字的推文数据。（不一定有坐标）
-
-* `twitter/hist/melbourne/geo`: 2014-2020墨尔本地区所有含有坐标信息的推文数据。（貌似2019年以后的老师的数据库里没有）
-
-* `twitter/hist/melbourne/relative`: 2014-2020墨尔本地区至少含有一个关键字的推文数据。（先爬下来，不一定用得到）
+* *sydney-relative*: All tweets containing at least one occurrence of any keyword collected between 2019 and 2020 in Sydney. This database incorporates in total 2887199 tweets and will be used in Scenario 1.
+* *sydney-geo*: All geo-tagged tweets collected between 2019 and 2020 in Sydney. This database incorporates in total 104977 tweets and will be used in Scenario 1.
+* *melbourne-geo*: All geo-tagged tweets collected since 2014 in Melbourne. This database incorporates in total 622872 tweets and will be used in Scenario 2.
+* *all*: All tweets collected over the past 30 days (2021 Mid-April - 2021 Mid-May) in Sydney, Melbourne, Brisbane, Adelaide, Perth and Canberra. This database includes in total 288860 tweets and will be used in Scenario 3.
 
 
-# 目前版本:
+# Scripts:
 
-* `extractor.py`: 用于把所有已经爬取的文档的信息进行精炼提取。所有的数据库都合并在一起，并且只保存了关键的信息。
-
-* `hist-update.py`: 用于保存Richard数据库里面的文档。只保存需要含有关键信息的文档。
-
-* `sydney-update.sh`: 爬取悉尼的历史数据。通过循环语句把每一天的数据临时保存在`temp\twitter.json`里面，然后`hist-update.py`会处理这个文档。
-
-* `melb-update.sh`: 爬取墨尔本的历史数据。和`sydney-update.sh`类似。
+* `hist-update.py`: Extract, pre-process and save twitter data from downloaded Richard's private database.
+* `sydney-update.sh`: Download and save historical Sydney data。
+* `melb-update.sh`: Download and save historical Melbourne data
 
 # Scenarios:
 
-## a. 初步想法：
-
-每一个Scenario就会跳转到一个网页。网页为静态，不需要和用户交互。该网页含有标题，数据来源（城市+时间），总推文数量，简单的Scenario的描述，最后就是该Scenario的图标（下面会说到）。
-
-## b. 情景1:
+## a. Scenario 1:
 
 **Topic:** How Chinese-Australia relationship and Australian people's views on China is influenced by the breakout of COVID-19?
 
@@ -41,87 +28,83 @@
 
 > All tweets made during 2019-2020 in Greater Sydney. 
 
-**图表A**：Line Chart
+**Figure A**：Line Chart
 
-> **关键词：**`china_words`，`covid_words`，`vulgar_words`
+> **Keywords：**`china_words`，`covid_words`，`vulgar_words`
 >
-> **数据库：**`twitter/hist/sydney/relative`
+> **Database：**`twitter/hist/sydney/relative`
 >
-> **数据信息**：含有关键词的推文的情绪分数的时间线。The time series of sentiment scores for tweets containing keywords related to China from 2019 to 2020.
+> **Data Info**：The time series of sentiment scores for tweets containing keywords related to China from 2019 to 2020.
 >
-> **横坐标**：2019年到2020年的月份（共24个月），或者2019年10月到2020年9月的月份（12个月），根据排版需要来决定。
+> **X-axis**：Months from 2019 to 2020.
 >
-> **纵坐标**: 
+> **Y-axis**: 
 >
-> > **1.** 涉及`china_words`的Average (或者Total) Sentiment Score。(**View:** `scenario_1/china_stats`)
+> > **1.** `china_words` Average Sentiment Score。(**View:** `scenario_1/china_stats`)
 > >
-> > **2.** 涉及`china_words`和`covid_words`的Average (或者Total) Sentiment Score。(**View:** `scenario_1/china_covid_stats`)
+> > **2.** `china_words` and `covid_words` Average Sentiment Score。(**View:** `scenario_1/china_covid_stats`)
 > >
-> > **3.** 涉及`china_words`和`vulgar_words`的Average (或者Total) Sentiment Score。(**View:** `scenario_1/chian_vulgar_stats`)
+> > **3.** `china_words` and`vulgar_words` Average Sentiment Score。(**View:** `scenario_1/chian_vulgar_stats`)
+> >
+> > **4.** Monthly COVID Newly diagnosed Number in AU.
+
+**Figure B**：Line Chart
+
+> **Keywords：**`china_words`，`covid_words`，`vulgar_words`
+>
+> **Database：**`twitter/hist/sydney/relative`
+>
+> **Data Info**：The time series of the number of tweets containing keywords related to China from 2019 to 2020.
+>
+> **X-axis**：Months from 2019 to 2020.
+>
+> **Y-axis**: 
+>
+> > **1.** `china_words`的数量。(**View:** `scenario_1/china_stats`)
+> >
+> > **2.** `china_words`和`covid_words`的数量。(**View:** `scenario_1/china_covid_stats`)
+> >
+> > **3.** `china_words`和`vulgar_words`的数量。(**View:** `scenario_1/chian_vulgar_stats`)
 > >
 > > **4.** 月新增确诊人数 **(这个可以弄成柱状图)**。
 
-**图表B**：Line Chart
+**Figure C**：Bar Chart
 
-> **关键词：**`china_words`，`covid_words`，`vulgar_words`
+> **Keywords**：`china_words`
 >
-> **数据库：**`twitter/hist/sydney/relative`
+> **Database：**`twitter/hist/sydney/geo`
 >
-> **数据信息**：含有关键词的推文的数量的时间线。The time series of the number of tweets containing keywords related to China from 2019 to 2020.
+> **Data Info**：不同SA2地区含有Keywords的推文的情绪分数。The distribution the sentiment score for tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney. (At least 20 related tweets are required for each SA2 location)
 >
-> **横坐标**：2019年到2020年的月份（共24个月），或者2019年10月到2020年9月的月份（12个月），根据排版需要来决定。
+> **X-axis**：Top 5 and Last 5 Suburbs.
 >
-> **纵坐标**: 
->
-> > **1.** 涉及`china_words`的数量。(**View:** `scenario_1/china_stats`)
-> >
-> > **2.** 涉及`china_words`和`covid_words`的数量。(**View:** `scenario_1/china_covid_stats`)
-> >
-> > **3.** 涉及`china_words`和`vulgar_words`的数量。(**View:** `scenario_1/chian_vulgar_stats`)
-> >
-> > **4.** 月新增确诊人数 **(这个可以弄成柱状图)**。
+> **Y-axis**:  `china_words` Average Sentiment Score。(**View:** `scenario_1/china_stats`)
 
-**图表C**：Bar Chart
+**Figure D**：Bar Chart
 
-> **关键词**：`china_words`
+> **Keywords**：`china_words`
 >
-> **数据库：**`twitter/hist/sydney/geo`
+> **Database：**`twitter/hist/sydney/geo`
 >
-> **数据信息**：不同SA2地区含有关键词的推文的情绪分数。The distribution the sentiment score for tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney. (At least 20 related tweets are required for each SA2 location)
+> **Data Info**：The distribution of the number of tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney. 
 >
-> **横坐标**：前五位与后五位地区名。
+> **X-axis**：Top 10 Suburbs.
 >
-> **纵坐标**:  涉及`china_words`的Average (或者Total) Sentiment Score。(**View:** `scenario_1/china_stats`)
->
-> **备注**：有条件的话可以改成区域HeatMap。
+> **Y-axis**:  # of `china_words`。(**View:** `scenario_1/china_stats`)
 
-**图表D**：Bar Chart
+**Figure E,F**：Scatter Plot
 
-> **关键词**：`china_words`
+> **Keywords**：`china_words`
 >
-> **数据库：**`twitter/hist/sydney/geo`
+> **Database：**`twitter/hist/sydney/geo`
 >
-> **数据**：不同SA2地区含有关键词的推文的数量。The distribution of the number of tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney. 
+> **Data Info**：The correlation between sentiment score distribution for tweets made in 2019 and 2020 containing China-related keywords over each SA2 location in Sydney and the demographic characteristics and macro-economic indicator. 
 >
-> **横坐标**：前十位地区名。
+> **X-axis**：AURIN
 >
-> **纵坐标**:  涉及`china_words`的数量。(**View:** `scenario_1/china_stats`)
->
-> **备注**：有条件的话可以改成区域HeatMap。
+> **Y-axis**: `china_words`Average Sentiment Score。(**View:** `scenario_1/china_stats`)
 
-**图表E,F**：Scatter Plot (两个)
-
-> **关键词**：`china_words`
->
-> **数据库：**`twitter/hist/sydney/geo`
->
-> **数据信息**：不同SA2地区含有关键词的推文的情绪分数与AURIN数据的比较。The correlation between sentiment score distribution for tweets made in 2019 and 2020 containing China-related keywords over each SA2 location in Sydney and the demographic characteristics and macro-economic indicator. 
->
-> **横坐标**：AURIN的某项数据。图E为经济指标。图F为人口特征。
->
-> **纵坐标**: 涉及`china_words`的Average (或者Total) Sentiment Score。(**View:** `scenario_1/china_stats`)
-
-## c. 情景2:
+## c. Scenario 2:
 
 **Topic:** Which suburb is considered as most unsafe place in Melbourne ?
 
@@ -131,73 +114,67 @@
 
 > All tweets made between 2014-2021 in Greater Melbourne. 
 
-**图表A**：Bar Chart
+**Figure A**：Bar Chart
 
-> **关键词**：`vulgar_words`，`crime_words`，`alcohol_words`
+> **Keywords**：`vulgar_words`，`crime_words`，`alcohol_words`
 >
-> **数据库：**`twitter/hist/melbourne/geo`
+> **Database：**`twitter/hist/melbourne/geo`
 >
-> **数据信息**：不同SA2地区含有关键词的推文占该地区所有推文的比例。The distribution of the proportion of tweets containing vulgar, crime or alcohol related words over different SA2 locations in Melbourne. (At least 50 total tweets are required for each SA2 location)
+> **Data Info**：The distribution of the proportion of tweets containing vulgar, crime or alcohol related words over different SA2 locations in Melbourne. (At least 50 total tweets are required for each SA2 location)
 >
-> **横坐标**：前十位地区名。
+> **X-axis**：Top 10 Suburbs.
 >
-> **纵坐标**: 涉及`vulgar_words`，`crime_words`和`alcohol_words`的推文的比例 (**View:** `scenario_2/bad_words_stats`)
->
-> **备注**：有条件的话可以改成区域HeatMap。
+> **Y-axis**: `vulgar_words`，`crime_words` and `alcohol_words` proportion (**View:** `scenario_2/bad_words_stats`)
 
-**图表B**：Bar Chart
+**Figure B**：Bar Chart
 
-> **关键词**：`vulgar_words`，`crime_words`，`alcohol_words`
+> **Keywords**：`vulgar_words`，`crime_words`，`alcohol_words`
 >
-> **数据库：**`twitter/hist/melbourne/geo`
+> **Database：**`twitter/hist/melbourne/geo`
 >
-> **数据信息**：不同SA2地区含有关键词的推文的数量。The distribution the number of tweets containing vulgar, crime or alcohol related words over different SA2 locations in Melbourne.
+> **Data Info**：The distribution the number of tweets containing vulgar, crime or alcohol related words over different SA2 locations in Melbourne.
 >
-> **横坐标**：前十位地区名。
+> **X-axis**：Last 10 Suburbs.
 >
-> **纵坐标**: 涉及`vulgar_words`，`crime_words`和`alcohol_words`的推文的数量 (**View:** `scenario_2/bad_words_stats`)
->
-> **备注**：有条件的话可以改成区域HeatMap。
+> **Y-axis**: `vulgar_words`，`crime_words` and `alcohol_words` number (**View:** `scenario_2/bad_words_stats`)
 
-**图表C**：Bar Chart
+**Figure C**：Bar Chart
 
-> **关键词**：无
+> **Keywords**：None.
 >
-> **数据库：**`twitter/hist/melbourne/geo`
+> **Database：**`twitter/hist/melbourne/geo`
 >
-> **数据信息**：不同SA2地区的所有推文的情绪分数。The distribution the sentiment score for tweets over different SA2 locations in Melbourne. (At least 50 total tweets are required for each SA2 location)
+> **Data Info**：The distribution the sentiment score for tweets over different SA2 locations in Melbourne. (At least 50 total tweets are required for each SA2 location)
 >
-> **横坐标**：**后**十位地区名。
+> **X-axis**：Last 10 Suburbs.
 >
-> **纵坐标**: 所有推文的Average (或者Total) Sentiment Score。 (**View:** `scenario_2/afinn_stats`)
->
-> **备注**：有条件的话可以改成区域HeatMap。
+> **Y-axis**: All Average Sentiment Score。 (**View:** `scenario_2/afinn_stats`)
 
-**图表D**：Scatter Plot
+**Figure D**：Scatter Plot
 
-> **关键词**：`vulgar_words`，`crime_words`，`alcohol_words`
+> **Keywords**：`vulgar_words`，`crime_words`，`alcohol_words`
 >
-> **数据库：**`twitter/hist/melbourne/geo`
+> **Database：**`twitter/hist/melbourne/geo`
 >
-> **数据信息**：不同SA2地区的所有推文的情绪分数与含有关键词的推文的比例的比较。The correlation between the distribution of the sentiment score and the distribution of the vulgar, crime or alcohol related tweets proportion over different SA2 locations in Melbourne.
+> **Data Info**：The correlation between the distribution of the sentiment score and the distribution of the vulgar, crime or alcohol related tweets proportion over different SA2 locations in Melbourne.
 >
-> **横坐标**：涉及`vulgar_words`，`crime_words`和`alcohol_words`的推文的比例 (**View:** `scenario_2/bad_words_stats`)
+> **X-axis**：`vulgar_words`，`crime_words` and `alcohol_words` (**View:** `scenario_2/bad_words_stats`)
 >
-> **纵坐标**: 所有推文的Average (或者Total) Sentiment Score。 (**View:** `scenario_2/afinn_stats`)
+> **Y-axis**: All Average Sentiment Score。 (**View:** `scenario_2/afinn_stats`)
 
-**图表E,F**：Scatter Plot (两个)
+**Figure E,F**：Scatter Plot
 
-> **关键词**：`vulgar_words`，`crime_words`，`alcohol_words`
+> **Keywords**：`vulgar_words`，`crime_words`，`alcohol_words`
 >
-> **数据库：**`twitter/hist/melbourne/geo`
+> **Database：**`twitter/hist/melbourne/geo`
 >
-> **数据信息**：不同SA2地区含有关键词的推文的比例与AURIN数据的比较。The correlation between the distribution of the vulgar, crime or alcohol related tweets proportion over each SA2 location in Melbourne and the demographic characteristics and macro-economic indicator. (At least 20 tweets is required for each SA2 location)
+> **Data Info**：The correlation between the distribution of the vulgar, crime or alcohol related tweets proportion over each SA2 location in Melbourne and the demographic characteristics and macro-economic indicator. (At least 20 tweets is required for each SA2 location)
 >
-> **横坐标**：AURIN的某项数据。图E为经济指标。图F为人口特征。
+> **X-axis**：AURIN
 >
-> **纵坐标**: 涉及`vulgar_words`，`crime_words`和`alcohol_words`的推文的比例 (**View:** `scenario_2/bad_words_stats`)
+> **Y-axis**: `vulgar_words`，`crime_words` and `alcohol_words` proportion (**View:** `scenario_2/bad_words_stats`)
 
-## d. 情景3:
+## d. Scenario 3:
 
 **Topic:** Which major city in Australia do non-English speaking immigrants favour most?
 
@@ -207,38 +184,38 @@
 
 > All tweets made in the latest month in Sydney, Melbourne, Brisbane, Adelaide, Perth and Canberra.
 
-**图表A**：Bar Chart
+**Figure A**：Bar Chart
 
-> **关键词**：无
+> **Keywords**：None
 >
-> **数据库：**`twitter/current/all`
+> **Database：**`twitter/current/all`
 >
-> **数据信息**：不同城市非英语推文的比例。The distribution of the proportion of non-English tweets over the 6 major cities in Australia. 
+> **Data Info**：The distribution of the proportion of non-English tweets over the 6 major cities in Australia. 
 >
-> **横坐标**：城市名字（根据纵坐标从高到低）。
+> **X-axis**：City names
 >
-> **纵坐标**: 非英文的推文的比例 (**View:** `scenario_3/nonenglish_stats`)
+> **Y-axis**: Non-english proportion (**View:** `scenario_3/nonenglish_stats`)
 
-**图表B**：Scatter Plot
+**Figure B**：Scatter Plot
 
-> **关键词**：无
+> **Keywords**：None
 >
-> **数据库：**`twitter/current/all`
+> **Database：**`twitter/current/all`
 >
-> **数据信息**：不同城市非英语推文的比例与所有推文的情绪分数的比较。The correlation between distribution of the proportion of non-English tweets and the distribution of the average sentiment score for all tweets over the 6 major cities in Australia. 
+> **Data Info**：The correlation between distribution of the proportion of non-English tweets and the distribution of the average sentiment score for all tweets over the 6 major cities in Australia. 
 >
-> **横坐标**：所有推文的Average (或者Total) Sentiment Score。 (**View:** `scenario_3/afinn_stats`)。
+> **X-axis**：All Average Sentiment Score。 (**View:** `scenario_3/afinn_stats`)。
 >
-> **纵坐标**: 非英文的推文的比例 (**View:** `scenario_3/nonenglish_stats`)
+> **Y-axis**: Non-english proportion (**View:** `scenario_3/nonenglish_stats`)
 
-**图表C,D**：Scatter Plot (两个)
+**Figure C,D**：Scatter Plot
 
-> **关键词**：无
+> **Keywords**：None
 >
-> **数据库：**`twitter/current/all`
+> **Database：**`twitter/current/all`
 >
-> **数据信息**：不同城市非英语推文的比例与AURIN数据的比较。The correlation between the distribution of the proportion of non-English tweets and the demographic characteristics and macro-economic indicator. 
+> **Data Info**：The correlation between the distribution of the proportion of non-English tweets and the demographic characteristics and macro-economic indicator. 
 >
-> **横坐标**：AURIN的某项数据。图C为经济指标。图D为人口特征。
+> **X-axis**：AURIN
 >
-> **纵坐标**: 非英文的推文的比例 (**View:** `scenario_3/nonenglish_stats`)
+> **Y-axis**: Non-english proportion (**View:** `scenario_3/nonenglish_stats`)

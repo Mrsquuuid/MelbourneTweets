@@ -1,29 +1,27 @@
-# 关于Tweet数据
+# About Twitter Data Fields
 
-有用的Field:
+### Useful fields in twitter document:
 
-> **推文**: text/full_text
+> **text**: text/full_text
 >
-> **地点**: place.full_name
+> **location**: place.full_name
 >
-> **语言**: lang
+> **language**: lang
 
-可以进行的分析:
+### Twitter analysis:
 
-> 1. Average sentiment score. 需要用Python和`affin`包
+> 1. Average sentiment score. Need Python package`affin`
 >
->    > a. 不同时间段的Sentiment分布
+>    > a. Distribution of sentiment score in different time slots of a day
 >    >
->    > b. 不同地点的Sentiment的分布(最后大概会有5000个推文有坐标)
->    >
->    > > 需要先标注出所在SA2的Code
->
-> 2. Tweet 地区数量: 就是目前每个城市获取的推文的数量。
+>    > b. Distribution of sentiment score in different suburbs
+>    
+>    2. \# of Tweets in different suburbs
 >
 > 3. Langauge Distribution
 >
-> 4. Key word 搜索:
->    > a. Covid related.
+> 4. Key word search:
+>   > a. Covid related.
 >    > 
 >    > b. Vaccine related
 >    > 
@@ -35,54 +33,54 @@
 
 # 关于AURIN数据
 
-Study Area需要选择: Australia (country/au)
+Study Area: Australia (country/au)
 
-Aggregation Level优先选择: Greater Capital City Statistical Areas, Working Zone，Statistical Area 4 (SA4)
+Aggregation Level: Greater Capital City Statistical Areas, Working Zone，Statistical Area 4 (SA4)
 
 > **1. Greater Capital City Statistical Areas (GCCSA)**：
 >
->  > **悉尼**：Greater Sydney
+>  > **Sydney**：Greater Sydney
 >  >
->  > **墨尔本**：Greater Melbourne
+>  > **Melbourne**：Greater Melbourne
 >  >
->  > **阿德莱德**：Greater Alelaide
+>  > **Adelaide**：Greater Adelaide
 >  >
->  > **珀斯**：Greater Perth
+>  > **Perth**：Greater Perth
 >  >
->  > **堪培拉**：Australian Capital Territory 
+>  > **Canberra**：Australian Capital Territory 
 >  >
->  > **布里斯班**：Greater Brisbane
+>  > **Brisbane**：Greater Brisbane
 >
 > **2. Working Zone**：
 >
-> > **悉尼**：Sydney & Surrounds
+> > **Sydney**：Sydney & Surrounds
 > >
-> > **墨尔本**：Melbourne & Surrounds
+> > **Melbourne**：Melbourne & Surrounds
 > >
-> > **阿德莱德**：Alelaide & Surrounds
+> > **Adelaide**：Adelaide & Surrounds
 > >
-> > **珀斯**：Perth & Surrounds
+> > **Perth**：Perth & Surrounds
 > >
-> > **堪培拉**：Canberra & Surrounds
+> > **Canberra**：Canberra & Surrounds
 > >
-> > **布里斯班**：Brisbane & Surrounds
+> > **Brisbane**：Brisbane & Surrounds
 >
 >   **3. Statistical Area 4 (SA4)**：
 >
-> > **悉尼**：Sydney + 方位
+> > **Sydney**：Sydney + Points of the compass
 > >
-> > **墨尔本**：Melbourne + 方位
+> > **Melbourne**：Melbourne + Points of the compass
 > >
-> > **阿德莱德**：Alelaide + 方位
+> > **Adelaide**：Adelaide + Points of the compass
 > >
-> > **珀斯**：Perth + 方位
+> > **Perth**：Perth + Points of the compass
 > >
-> > **堪培拉**：Australian Capital Territory
+> > **Canberra**：Australian Capital Territory
 > >
-> > **布里斯班**：Brisbane + 方位
+> > **Brisbane**：Brisbane + Points of the compass
 
-对于有坐标的数据的分析，使用Statistical Area 2 (SA2) 进行分析。
+For geo-tagged tweets，use Statistical Area 2 (SA2) for anslysis。
 
-# 可用的AURIN数据:
+# Candidate AURIN Data:
 
-请参考每一个文件夹`GCCSA`，`Melb_SA2`和`SA4`。文件夹标题为数据标题，`meta.json`文件有详细说明。
+Refer to folder`GCCSA`，`Melb_SA2` and`SA4`。Folder name is the data-set name and`meta.json`provides detailer description of the data-set and each field.

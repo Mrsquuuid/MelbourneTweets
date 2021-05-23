@@ -60,13 +60,13 @@ Click [here](https://stackoverflow.com/questions/11639534/couchdb-dump-to-file-a
 >
 > **Y-axis**: 
 >
-> > **1.** `china_words`的数量。(**View:** `scenario_1/china_stats`)
+> > **1.** `china_words` number。(**View:** `scenario_1/china_stats`)
 > >
-> > **2.** `china_words`和`covid_words`的数量。(**View:** `scenario_1/china_covid_stats`)
+> > **2.** `china_words` and `covid_words` number。(**View:** `scenario_1/china_covid_stats`)
 > >
-> > **3.** `china_words`和`vulgar_words`的数量。(**View:** `scenario_1/chian_vulgar_stats`)
+> > **3.** `china_words` and `vulgar_words` number。(**View:** `scenario_1/chian_vulgar_stats`)
 > >
-> > **4.** 月新增确诊人数 **(这个可以弄成柱状图)**。
+> > **4.** Monthly COVID Newly diagnosed Number in AU.
 
 **Figure C**：Bar Chart
 
@@ -74,7 +74,7 @@ Click [here](https://stackoverflow.com/questions/11639534/couchdb-dump-to-file-a
 >
 > **Database：**`twitter/hist/sydney/geo`
 >
-> **Data Info**：不同SA2地区含有Keywords的推文的情绪分数。The distribution the sentiment score for tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney. (At least 20 related tweets are required for each SA2 location)
+> **Data Info**：The distribution the sentiment score for tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney. (At least 20 related tweets are required for each SA2 location)
 >
 > **X-axis**：Top 5 and Last 5 Suburbs.
 >
@@ -104,7 +104,7 @@ Click [here](https://stackoverflow.com/questions/11639534/couchdb-dump-to-file-a
 >
 > **Y-axis**: `china_words`Average Sentiment Score。(**View:** `scenario_1/china_stats`)
 
-## c. Scenario 2:
+## b. Scenario 2:
 
 **Topic:** Which suburb is considered as most unsafe place in Melbourne ?
 
@@ -174,7 +174,7 @@ Click [here](https://stackoverflow.com/questions/11639534/couchdb-dump-to-file-a
 >
 > **Y-axis**: `vulgar_words`，`crime_words` and `alcohol_words` proportion (**View:** `scenario_2/bad_words_stats`)
 
-## d. Scenario 3:
+## c. Scenario 3:
 
 **Topic:** Which major city in Australia do non-English speaking immigrants favour most?
 

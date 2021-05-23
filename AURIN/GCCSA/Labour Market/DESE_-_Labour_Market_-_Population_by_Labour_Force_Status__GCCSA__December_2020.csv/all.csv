@@ -1,0 +1,21 @@
+fid, lbr_frc_stat, gccsa_name_2016, state_code_2016, state_name_2016, p, gccsa_code_2016
+2,Employed Part-Time,Greater Sydney,1,New South Wales,775400,1GSYD
+6,Employed Part-Time,Greater Melbourne,2,Victoria,800300,2GMEL
+10,Employed Part-Time,Greater Brisbane,3,Queensland,384700,3GBRI
+14,Employed Part-Time,Greater Adelaide,4,South Australia,231800,4GADE
+18,Employed Part-Time,Greater Perth,5,Western Australia,355800,5GPER
+1,Employed Full-Time,Greater Sydney,1,New South Wales,1979500,1GSYD
+5,Employed Full-Time,Greater Melbourne,2,Victoria,1801400,2GMEL
+9,Employed Full-Time,Greater Brisbane,3,Queensland,874500,3GBRI
+13,Employed Full-Time,Greater Adelaide,4,South Australia,429900,4GADE
+17,Employed Full-Time,Greater Perth,5,Western Australia,717400,5GPER
+4,Not in the Labour Force,Greater Sydney,1,New South Wales,1438000,1GSYD
+8,Not in the Labour Force,Greater Melbourne,2,Victoria,1431100,2GMEL
+12,Not in the Labour Force,Greater Brisbane,3,Queensland,695800,3GBRI
+16,Not in the Labour Force,Greater Adelaide,4,South Australia,417600,4GADE
+20,Not in the Labour Force,Greater Perth,5,Western Australia,557000,5GPER
+3,Unemployed Total,Greater Sydney,1,New South Wales,181300,1GSYD
+7,Unemployed Total,Greater Melbourne,2,Victoria,192600,2GMEL
+11,Unemployed Total,Greater Brisbane,3,Queensland,99300,3GBRI
+15,Unemployed Total,Greater Adelaide,4,South Australia,49800,4GADE
+19,Unemployed Total,Greater Perth,5,Western Australia,81200,5GPER

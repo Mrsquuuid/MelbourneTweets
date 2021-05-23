@@ -1,0 +1,5 @@
+*.DS_Store
+*.log
+.test.py.swp
+.ipynb_checkpoints
+temp

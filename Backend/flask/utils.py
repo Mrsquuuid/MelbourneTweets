@@ -16,13 +16,30 @@ def date_view_to_json(url):
     return {"date": date, "total": total, "avg": avg, "count": count}
 
 
+def special_date_view_to_json(url):
+    res = requests.get(url)
+    json_text = json.loads(res.text)
+    json_text['rows'].append({'key': ['2019', 2], 'value': {'sum': 0, 'avg': 0, 'count': 0}})
+    json_text['rows'].append({'key': ['2019', 4], 'value': {'sum': 0, 'avg': 0, 'count': 0}})
+    json_text['rows'].append({'key': ['2019', 7], 'value': {'sum': 0, 'avg': 0, 'count': 0}})
+    json_text['rows'].append({'key': ['2019', 12], 'value': {'sum': 0, 'avg': 0, 'count': 0}})
+    json_text['rows'].sort(key = lambda x:x['key'])
+    date,total,avg,count = [],[],[],[]
+    for data in json_text['rows']:
+        date.append(data['key'][0]+'-'+str(data['key'][1]))
+        total.append(data['value']['sum'])
+        avg.append(data['value']['avg'])
+        count.append(data['value']['count'])
+    return {"date": date, "total": total, "avg": avg, "count": count}
+
+
 # return china stats, china covid stats, china vulgar stats, new cases stats
 def get_s1_ab_data():
     china_url = "http://admin:admin@172.26.133.54:5984/sydney-relative/_design/scenario_1/_view/china_stats?group=true"
     china_covid_url = "http://admin:admin@172.26.133.54:5984/sydney-relative/_design/scenario_1/_view/china_covid_stats?group=true"
     china_vulgar_url = "http://admin:admin@172.26.133.54:5984/sydney-relative/_design/scenario_1/_view/china_vulgar_stats?group=true"
     china_json = date_view_to_json(china_url)
-    china_covid_json = date_view_to_json(china_covid_url)
+    china_covid_json = special_date_view_to_json(china_covid_url)
     china_vulgar_json = date_view_to_json(china_vulgar_url)
     # global out_df
     out_df = pd.read_csv('out.csv', dtype=str, header=0, encoding='ascii', engine='python')
@@ -115,13 +132,13 @@ def get_s2_a_data():
     return result
 
 
-# return the top 10 suburb stats that have greatest count of bad word tweets (except those have count = 1)
+# return the top 10 suburb stats that have greatest sum of bad word tweets (except those have count = 1)
 def get_s2_b_data():
     badword_url = "http://admin:admin@172.26.133.54:5984/melbourne-geo/_design/scenario_2/_view/bad_words_stats?group=true"
     res = requests.get(badword_url)
     json_text = json.loads(res.text)
     temp = json_text['rows'][1:]
-    temp.sort(key = lambda x:x['value']['count'], reverse=True)
+    temp.sort(key = lambda x:x['value']['sum'], reverse=True)
     useful = []
     for t in temp:
         if t['value']['count'] != 1:

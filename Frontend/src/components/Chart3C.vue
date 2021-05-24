@@ -73,7 +73,7 @@
 						name: 'Total Business Number'
 					},
 					series: [{
-							name: 'Adelaide',
+							name: 'Sydney',
 							symbolSize: 10,
 							data: [
 								[this.data.avg[0], this.data.total_businesses_num[0]]
@@ -81,7 +81,7 @@
 							type: 'scatter'
 						},
 						{
-							name: 'Brisbane',
+							name: 'Melbourne',
 							symbolSize: 10,
 							data: [
 								[this.data.avg[1], this.data.total_businesses_num[1]]
@@ -89,7 +89,7 @@
 							type: 'scatter'
 						},
 						{
-							name: 'Canberra',
+							name: 'Brisbane',
 							symbolSize: 10,
 							data: [
 								[this.data.avg[2], this.data.total_businesses_num[2]]
@@ -97,7 +97,7 @@
 							type: 'scatter'
 						},
 						{
-							name: 'Melbourne',
+							name: 'Adelaide',
 							symbolSize: 10,
 							data: [
 								[this.data.avg[3], this.data.total_businesses_num[3]]
@@ -113,7 +113,7 @@
 							type: 'scatter'
 						},
 						{
-							name: 'Sydney',
+							name: 'Canberra',
 							symbolSize: 10,
 							data: [
 								[this.data.avg[5], this.data.total_businesses_num[5]]

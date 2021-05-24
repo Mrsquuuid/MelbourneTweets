@@ -79,7 +79,7 @@
 						name: 'Proportion Of Residents\nNot Speaking English At Home'
 					},
 					series: [{
-							name: 'Adelaide',
+							name: 'Sydney',
 							symbolSize: 10,
 							data: [
 								[this.data.avg[0], this.data.speak_other_langs_percentage[0]]
@@ -87,7 +87,7 @@
 							type: 'scatter'
 						},
 						{
-							name: 'Brisbane',
+							name: 'Melbourne',
 							symbolSize: 10,
 							data: [
 								[this.data.avg[1], this.data.speak_other_langs_percentage[1]]
@@ -95,7 +95,7 @@
 							type: 'scatter'
 						},
 						{
-							name: 'Canberra',
+							name: 'Brisbane',
 							symbolSize: 10,
 							data: [
 								[this.data.avg[2], this.data.speak_other_langs_percentage[2]]
@@ -103,7 +103,7 @@
 							type: 'scatter'
 						},
 						{
-							name: 'Melbourne',
+							name: 'Adelaide',
 							symbolSize: 10,
 							data: [
 								[this.data.avg[3], this.data.speak_other_langs_percentage[3]]
@@ -119,7 +119,7 @@
 							type: 'scatter'
 						},
 						{
-							name: 'Sydney',
+							name: 'Canberra',
 							symbolSize: 10,
 							data: [
 								[this.data.avg[5], this.data.speak_other_langs_percentage[5]]

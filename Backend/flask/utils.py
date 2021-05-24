@@ -43,13 +43,13 @@ def clean_up(result):
     return({"suburb": suburb, "total": total, "avg": avg, "count": count})
 
 
-# return the top 5 and last 5 suburb stats based on the avg of china tweets (except those have count = 1)
+# return the top 10 suburb stats based on the sum of china tweets (except those have count = 1)
 def get_s1_c_data():
     china_url = "http://admin:admin@172.26.133.54:5984/sydney-geo/_design/scenario_1/_view/china_stats?group=true"
     res = requests.get(china_url)
     json_text = json.loads(res.text)
     temp = json_text['rows'][1:]
-    temp.sort(key = lambda x:x['value']['avg'], reverse=True)
+    temp.sort(key = lambda x:x['value']['sum'], reverse=True)
     useful = []
     for t in temp:
         if t['value']['count'] != 1:
@@ -57,7 +57,7 @@ def get_s1_c_data():
     if len(useful) < 10:
         result = clean_up(useful)
     else:
-        result = clean_up(useful[:5] + useful[-5:])
+        result = clean_up(useful[:10])
     return result
 
 

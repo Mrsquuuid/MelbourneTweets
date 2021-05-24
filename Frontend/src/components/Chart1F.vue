@@ -40,8 +40,8 @@
 				var chart = this.$echarts.init(document.getElementById("main"));
 				var option = {
 					title: {
-						text: 'The number of tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney',
-						subtext: '(top 10 suburbs)',
+						text: 'Number Of China-Related Tweets By Suburb Between 2019 & 2020',
+						subtext: 'Top 10 Suburbs',
 						x: 'center',
 						y: 'top',
 						textStyle: {
@@ -54,8 +54,11 @@
 						x: 'center',
 						y: 'bottom'
 					},
-					xAxis: {},
+					xAxis: {
+						name: 'Number\nOf Tweets'
+					},
 					yAxis: {
+						name: 'Suburb',
 						data: this.data.suburb,
 						axisLabel: {
 							textStyle: {

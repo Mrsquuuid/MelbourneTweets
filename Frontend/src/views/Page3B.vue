@@ -89,6 +89,10 @@
 						Chart C
 						<a href="/3c"></a>
 					</a-menu-item>
+					<a-menu-item key="3d">
+						Chart D
+						<a href="/3d"></a>
+					</a-menu-item>
 				</a-sub-menu>
 			</a-menu>
 		</a-layout-sider>

@@ -2,7 +2,7 @@
 	<a-layout id="main-layout">
 		<a-layout-sider :trigger="null">
 			<div class="logo">Team 80</div>
-			<a-menu theme="dark" mode="inline" :default-selected-keys="['2a']" :open-keys="openKeys" @openChange="onOpenChange" >
+			<a-menu theme="dark" mode="inline" :default-selected-keys="['3d']" :open-keys="openKeys" @openChange="onOpenChange" >
 				<a-menu-item key="0">
 					Home
 					<a href="/"></a>
@@ -107,7 +107,7 @@
 
 <script>
 	// @ is an alias to /src
-	import Chart from '../components/Chart2A.vue';
+	import Chart from '../components/Chart3D.vue';
 
 	export default {
 		name: 'Page',
@@ -117,7 +117,7 @@
 		data() {
 			return {
 				rootSubmenuKeys: ['sub1', 'sub2', 'sub3'],
-				openKeys: ['sub2'],
+				openKeys: ['sub3'],
 			};
 		},
 		methods: {

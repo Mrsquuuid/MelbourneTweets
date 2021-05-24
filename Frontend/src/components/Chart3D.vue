@@ -22,7 +22,7 @@
 			fetch() {
 				var self = this;
 				$.ajax({
-					url: "http://172.26.129.23/s3/b",
+					url: "http://172.26.129.23/s3/cd",
 					type: "GET",
 					dataType: "json",
 					success: function(data) {
@@ -41,17 +41,22 @@
 				var chart = this.$echarts.init(document.getElementById("main"));
 				var option = {
 					title: {
-						text: 'Average Sentiment Score v.s. Proportion Of Non-English Tweets Average Sentiment Score Over The Past Month',
+						text: 'Proportion Of Residents Not Speaking English At Home  v.s. Proportion Of Non-English Tweets Over The Past Month',
 						subtext: 'At City Level',
 						x: 'center',
-						y: 'top'
+						y: 'top',
+						textStyle: {
+							fontSize: 14
+						}
 					},
 					tooltip: {
 						showDelay: 0,
 						formatter: function(params) {
 							if (params.value.length > 1) {
-								return params.seriesName + ' :<br/>' + 'Average Sentiment Score: ' +
-									params.value[0] + '<br/>' + 'Proportion: ' +
+								return params.seriesName + ' :<br/>' +
+									'Proportion Of Non-English Tweets Over The Past Month: ' +
+									params.value[0] + '<br/>' +
+									'Proportion Of Residents Not Speaking English At Home: ' +
 									params.value[1];
 							}
 						}
@@ -68,16 +73,16 @@
 						bottom: 10
 					},
 					xAxis: {
-						name: 'Average\nSentiment\nScore',
+						name: 'Proportion Of\nNon-English\nTweets Over\nThe Past\nMonth'
 					},
 					yAxis: {
-						name: 'Proportion'
+						name: 'Proportion Of Residents\nNot Speaking English At Home'
 					},
 					series: [{
 							name: 'Adelaide',
 							symbolSize: 10,
 							data: [
-								[this.data.afinn_avg[0], this.data.nonenglish_avg[0]]
+								[this.data.avg[0], this.data.speak_other_langs_percentage[0]]
 							],
 							type: 'scatter'
 						},
@@ -85,7 +90,7 @@
 							name: 'Brisbane',
 							symbolSize: 10,
 							data: [
-								[this.data.afinn_avg[1], this.data.nonenglish_avg[1]]
+								[this.data.avg[1], this.data.speak_other_langs_percentage[1]]
 							],
 							type: 'scatter'
 						},
@@ -93,7 +98,7 @@
 							name: 'Canberra',
 							symbolSize: 10,
 							data: [
-								[this.data.afinn_avg[2], this.data.nonenglish_avg[2]]
+								[this.data.avg[2], this.data.speak_other_langs_percentage[2]]
 							],
 							type: 'scatter'
 						},
@@ -101,7 +106,7 @@
 							name: 'Melbourne',
 							symbolSize: 10,
 							data: [
-								[this.data.afinn_avg[3], this.data.nonenglish_avg[3]]
+								[this.data.avg[3], this.data.speak_other_langs_percentage[3]]
 							],
 							type: 'scatter'
 						},
@@ -109,7 +114,7 @@
 							name: 'Perth',
 							symbolSize: 10,
 							data: [
-								[this.data.afinn_avg[4], this.data.nonenglish_avg[4]]
+								[this.data.avg[4], this.data.speak_other_langs_percentage[4]]
 							],
 							type: 'scatter'
 						},
@@ -117,7 +122,7 @@
 							name: 'Sydney',
 							symbolSize: 10,
 							data: [
-								[this.data.afinn_avg[5], this.data.nonenglish_avg[5]]
+								[this.data.avg[5], this.data.speak_other_langs_percentage[5]]
 							],
 							type: 'scatter'
 						}

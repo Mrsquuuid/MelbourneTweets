@@ -45,19 +45,17 @@
 				var chart = this.$echarts.init(document.getElementById("main"));
 				var option = {
 					title: {
-						text: 'The correlation between average sentiment score for tweets made from 2019 to 2020 containing China-related keywords over each SA2 location in Sydney and demographic characteristics',
+						text: 'Average Sentiment Score Of China-Related Tweets v.s. Number Of Chinese-Speaking Residents',
+						subtext: 'At Suburb Level',
 						x: 'center',
-						y: 'top',
-						textStyle: {
-							fontSize: 10
-						}
+						y: 'top'
 					},
 					tooltip: {
 						showDelay: 0,
 						formatter: function(params) {
 							if (params.value.length > 1) {
-								return 'Average sentiment score: ' +
-									params.value[0] + '<br/>' + 'Chinese tweets number: ' +
+								return 'Average Sentiment Score: ' +
+									params.value[0] + '<br/>' + 'Number Of People: ' +
 									params.value[1];
 							}
 						}
@@ -67,8 +65,12 @@
 						left: 'center',
 						bottom: 10
 					},
-					xAxis: {},
-					yAxis: {},
+					xAxis: {
+						name: 'Average\nSentiment\nScore'
+					},
+					yAxis: {
+						name: 'Number Of People'
+					},
 					series: [{
 							name: 'Suburb',
 							symbolSize: 10,

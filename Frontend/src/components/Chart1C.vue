@@ -40,7 +40,7 @@
 				var chart = this.$echarts.init(document.getElementById("main"));
 				var option = {
 					title: {
-						text: 'The monthly new cases from Jan 2020 to May 2021',
+						text: 'Monthly COVID-19 New Cases In Australia Since 2020',
 						x: 'center',
 						y: 'top'
 					},
@@ -51,9 +51,12 @@
 						y: 'bottom'
 					},
 					xAxis: {
+						name: 'Month',
 						data: this.data.new_cases_stats.date
 					},
-					yAxis: {},
+					yAxis: {
+						name: 'Number Of New Cases'
+					},
 					series: [{
 							name: 'New Cases',
 							type: 'bar',

@@ -94,6 +94,11 @@ const routes = [
     path: '/3c',
     name: 'Page3C',
     component: () => import(/* webpackChunkName: "about" */ '../views/Page3C.vue')
+  },
+  {
+    path: '/3d',
+    name: 'Page3D',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Page3D.vue')
   }
 ]
 

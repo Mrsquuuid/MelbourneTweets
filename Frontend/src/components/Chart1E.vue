@@ -40,22 +40,22 @@
 				var chart = this.$echarts.init(document.getElementById("main"));
 				var option = {
 					title: {
-						text: 'The sentiment score for tweets made in 2019 and 2020 containing China-related keywords over different SA2 locations in Sydney',
-						subtext: '(top 5 suburbs and last 5 suburbs)',
+						text: 'Sentiment Score Of China-Related Tweets By Suburb Between 2019 & 2020',
+						subtext: 'Top 10 Suburbs',
 						x: 'center',
-						y: 'top',
-						textStyle: {
-							fontSize: 16
-						}
+						y: 'top'
 					},
 					tooltip: {},
 					legend: {
-						data: ['Average', 'Total'],
+						data: ['Average Sentiment Score', 'Total Sentiment Score'],
 						x: 'center',
 						y: 'bottom'
 					},
-					xAxis: {},
+					xAxis: {
+						name: 'Score'
+					},
 					yAxis: {
+						name: 'Suburb',
 						data: this.data.suburb,
 						axisLabel: {
 							textStyle: {
@@ -64,13 +64,13 @@
 						}
 					},
 					series: [{
-							name: 'Average',
+							name: 'Average Sentiment Score',
 							type: 'bar',
 							data: this.data.avg,
 							color: '#5470c6'
 						},
 						{
-							name: 'Total',
+							name: 'Total Sentiment Score',
 							type: 'bar',
 							data: this.data.total,
 							color: '#fc0107'

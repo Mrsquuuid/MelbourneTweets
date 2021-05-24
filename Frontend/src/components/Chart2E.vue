@@ -45,20 +45,17 @@
 				var chart = this.$echarts.init(document.getElementById("main"));
 				var option = {
 					title: {
-						text: 'The correlation between the distribution of sentiment score over each SA2 location in Melbourne and income inequality',
-						subtext: '(At least 20 tweets is required for each SA2 location)',
+						text: 'Gini Index v.s. Proportion Of Vulgar, Crime or Alcohol Related Tweets',
+						subtext: 'At Suburb Level',
 						x: 'center',
-						y: 'top',
-						textStyle: {
-							fontSize: 14
-						}
+						y: 'top'
 					},
 					tooltip: {
 						showDelay: 0,
 						formatter: function(params) {
 							if (params.value.length > 1) {
-								return 'Average sentiment score: ' +
-									params.value[0] + '<br/>' + 'Income inequality: ' +
+								return 'Proportion: ' +
+									params.value[0] + '<br/>' + 'Gini Index: ' +
 									params.value[1];
 							}
 						}
@@ -68,8 +65,12 @@
 						left: 'center',
 						bottom: 10
 					},
-					xAxis: {},
-					yAxis: {},
+					xAxis: {
+						name: 'Proportion'
+					},
+					yAxis: {
+						name: 'Gini Index'
+					},
 					series: [{
 							name: 'Suburb',
 							symbolSize: 10,

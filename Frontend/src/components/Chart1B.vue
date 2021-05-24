@@ -40,37 +40,40 @@
 				var chart = this.$echarts.init(document.getElementById("main"));
 				var option = {
 					title: {
-						text: 'The total sentiment scores for tweets containing keywords related to China from 2019 to 2020',
+						text: 'Total Sentiment Score For China-Related Tweets By Month',
 						x: 'center',
 						y: 'top'
 					},
 					tooltip: {},
 					legend: {
-						data: ['Covid Word', 'China Word', 'Vulgar Word'],
+						data: ['Covid & China', 'Vulgar & China', 'China'],
 						x: 'center',
 						y: 'bottom'
 					},
 					xAxis: {
+						name: 'Month',
 						data: this.data.china_stats.date
 					},
-					yAxis: {},
+					yAxis: {
+						name: 'Total Sentiment Score'
+					},
 					series: [{
-							name: 'Covid Word',
+							name: 'Covid & China',
 							type: 'line',
 							data: this.data.china_covid_stats.total,
 							color: '#5470c6'
 						},
 						{
-							name: 'China Word',
-							type: 'line',
-							data: this.data.china_stats.total,
-							color: '#20ffff'
-						},
-						{
-							name: 'Vulgar Word',
+							name: 'Vulgar & China',
 							type: 'line',
 							data: this.data.china_vulgar_stats.total,
 							color: '#fc0107'
+						},
+						{
+							name: 'China',
+							type: 'line',
+							data: this.data.china_stats.total,
+							color: '#20ffff'
 						}
 					]
 				};

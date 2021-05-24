@@ -40,19 +40,17 @@
 				var chart = this.$echarts.init(document.getElementById("main"));
 				var option = {
 					title: {
-						text: 'The correlation between the distribution of the proportion of non-English tweets and the demographic characteristics and macro-economic indicator',
+						text: 'Total Business Number v.s. Proportion Of Non-English Tweets Over The Past Month',
+						subtext: 'At City Level',
 						x: 'center',
-						y: 'top',
-						textStyle: {
-							fontSize: 12
-						}
+						y: 'top'
 					},
 					tooltip: {
 						showDelay: 0,
 						formatter: function(params) {
 							if (params.value.length > 1) {
-								return params.seriesName + ' :<br/>' + 'Proportion of non-English tweets: ' +
-									params.value[0] + '<br/>' + 'Total businesses num: ' +
+								return params.seriesName + ' :<br/>' + 'Proportion: ' +
+									params.value[0] + '<br/>' + 'Total Business Number: ' +
 									params.value[1];
 							}
 						}
@@ -68,13 +66,17 @@
 						left: 'center',
 						bottom: 10
 					},
-					xAxis: {},
-					yAxis: {},
+					xAxis: {
+						name: 'Proportion'
+					},
+					yAxis: {
+						name: 'Total Business Number'
+					},
 					series: [{
 							name: 'Adelaide',
 							symbolSize: 10,
 							data: [
-								[this.data.speak_other_langs_percentage[0], this.data.total_businesses_num[0]]
+								[this.data.avg[0], this.data.total_businesses_num[0]]
 							],
 							type: 'scatter'
 						},
@@ -82,7 +84,7 @@
 							name: 'Brisbane',
 							symbolSize: 10,
 							data: [
-								[this.data.speak_other_langs_percentage[1], this.data.total_businesses_num[1]]
+								[this.data.avg[1], this.data.total_businesses_num[1]]
 							],
 							type: 'scatter'
 						},
@@ -90,7 +92,7 @@
 							name: 'Canberra',
 							symbolSize: 10,
 							data: [
-								[this.data.speak_other_langs_percentage[2], this.data.total_businesses_num[2]]
+								[this.data.avg[2], this.data.total_businesses_num[2]]
 							],
 							type: 'scatter'
 						},
@@ -98,7 +100,7 @@
 							name: 'Melbourne',
 							symbolSize: 10,
 							data: [
-								[this.data.speak_other_langs_percentage[3], this.data.total_businesses_num[3]]
+								[this.data.avg[3], this.data.total_businesses_num[3]]
 							],
 							type: 'scatter'
 						},
@@ -106,7 +108,7 @@
 							name: 'Perth',
 							symbolSize: 10,
 							data: [
-								[this.data.speak_other_langs_percentage[4], this.data.total_businesses_num[4]]
+								[this.data.avg[4], this.data.total_businesses_num[4]]
 							],
 							type: 'scatter'
 						},
@@ -114,7 +116,7 @@
 							name: 'Sydney',
 							symbolSize: 10,
 							data: [
-								[this.data.speak_other_langs_percentage[5], this.data.total_businesses_num[5]]
+								[this.data.avg[5], this.data.total_businesses_num[5]]
 							],
 							type: 'scatter'
 						}

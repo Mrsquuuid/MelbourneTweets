@@ -46,19 +46,17 @@
 				var chart = this.$echarts.init(document.getElementById("main"));
 				var option = {
 					title: {
-						text: 'The correlation between the distribution of the sentiment score and the distribution of the vulgar, crime or alcohol related tweets proportion over different SA2 locations in Melbourne',
+						text: 'Proportion v.s. Average Sentiment Score For Vulgar, Crime or Alcohol Related Tweets',
+						subtext: 'At Suburb Level',
 						x: 'center',
-						y: 'top',
-						textStyle: {
-							fontSize: 14
-						}
+						y: 'top'
 					},
 					tooltip: {
 						showDelay: 0,
 						formatter: function(params) {
 							if (params.value.length > 1) {
-								return 'Afinn average: ' +
-									params.value[0] + '<br/>' + 'Bad word average: ' +
+								return 'Average Sentiment Score: ' +
+									params.value[0] + '<br/>' + 'Proportion: ' +
 									params.value[1];
 							}
 						}
@@ -68,8 +66,12 @@
 						left: 'center',
 						bottom: 10
 					},
-					xAxis: {},
-					yAxis: {},
+					xAxis: {
+						name: 'Average\nSentiment\nScore'
+					},
+					yAxis: {
+						name: 'Proportion'
+					},
 					series: [{
 						name: 'Suburb',
 						symbolSize: 10,

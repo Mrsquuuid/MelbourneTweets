@@ -40,13 +40,10 @@
 				var chart = this.$echarts.init(document.getElementById("main"));
 				var option = {
 					title: {
-						text: 'The distribution the number of tweets containing vulgar, crime or alcohol related words over different SA2 locations in Melbourne',
-						subtext: '(top 10 suburbs)',
+						text: 'Number Of Vulgar, Crime or Alcohol Related Tweets By Suburb Since 2014',
+						subtext: 'Top 10 Suburbs',
 						x: 'center',
-						y: 'top',
-						textStyle: {
-							fontSize: 16
-						}
+						y: 'top'
 					},
 					tooltip: {},
 					legend: {
@@ -54,8 +51,11 @@
 						x: 'center',
 						y: 'bottom'
 					},
-					xAxis: {},
+					xAxis: {
+						name: 'Number\nOf Tweets'
+					},
 					yAxis: {
+						name: 'Suburb',
 						data: this.data.suburb,
 						axisLabel: {
 							textStyle: {
@@ -69,12 +69,12 @@
 							data: this.data.total,
 							color: '#5470c6'
 						},
-						{
-							name: 'The total number of tweets',
-							type: 'bar',
-							data: this.data.count,
-							color: '#fc0107'
-						}
+						// {
+						// 	name: 'The total number of tweets',
+						// 	type: 'bar',
+						// 	data: this.data.count,
+						// 	color: '#fc0107'
+						// }
 					]
 				};
 				chart.setOption(option);

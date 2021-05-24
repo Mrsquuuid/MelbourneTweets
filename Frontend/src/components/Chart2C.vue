@@ -40,13 +40,10 @@
 				var chart = this.$echarts.init(document.getElementById("main"));
 				var option = {
 					title: {
-						text: 'The distribution the sentiment score for tweets over different SA2 locations in Melbourne',
-						subtext: '(last 10 suburbs)',
+						text: 'Sentiment Score Of Vulgar, Crime or Alcohol Related Tweets By Suburb Since 2014',
+						subtext: 'Top 10 Suburbs',
 						x: 'center',
-						y: 'top',
-						textStyle: {
-							fontSize: 16
-						}
+						y: 'top'
 					},
 					tooltip: {},
 					legend: {
@@ -54,8 +51,11 @@
 						x: 'center',
 						y: 'bottom'
 					},
-					xAxis: {},
+					xAxis: {
+						name: 'Sentiment\nScore'
+					},
 					yAxis: {
+						name: 'Suburb',
 						data: this.data.suburb,
 						axisLabel: {
 							textStyle: {

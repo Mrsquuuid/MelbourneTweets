@@ -40,7 +40,7 @@
 				var chart = this.$echarts.init(document.getElementById("main"));
 				var option = {
 					title: {
-						text: 'The distribution of the proportion of non-English tweets over the 6 major cities in Australia',
+						text: 'Proportion Of Non-English Tweets By City Over The Past Month',
 						x: 'center',
 						y: 'top'
 					},
@@ -51,9 +51,12 @@
 						y: 'bottom'
 					},
 					xAxis: {
-						data: this.data.city
+						data: this.data.city,
+						name: 'City'
 					},
-					yAxis: {},
+					yAxis: {
+						name: 'Proportion'
+					},
 					series: [{
 						name: 'City',
 						type: 'bar',

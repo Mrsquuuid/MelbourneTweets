@@ -1,0 +1,97 @@
+# common variables
+availability_zone: melbourne-qh2-uom
+
+## security group
+#security_groups:
+#  - name: instance_ssh
+#    description: "security group for SSH access"
+#    protocol: tcp
+#    port_range_min: 22
+#    port_range_max: 22
+#    remote_ip_prefix: 0.0.0.0/0
+#  - name: instance_http
+#    description: "security group for HTTP access"
+#    protocol: tcp
+#    port_range_min: 80
+#    port_range_max: 80
+#    remote_ip_prefix: 0.0.0.0/0
+#  - name: instance_couchdb
+#    description: "security group for couchdb cluster setup"
+#    protocol: tcp
+#    port_range_min: 5984
+#    port_range_max: 5984
+#    remote_ip_prefix: 0.0.0.0/0
+#
+## instance openstacksdk
+#instance0_name: instance0
+#instance1_name: instance1
+#instance2_name: instance2
+#instance_network: qh2-uom-internal
+instance_image: f8b79936-6616-4a22-b55d-0d0a1d27bceb
+instance_key_name: demo-2
+instance_flavor: uom.mse.2c9g
+
+#Volume
+volumes:
+  - vol_name: instance_0_vol
+    vol_size: 30
+  - vol_name: instance_1_vol
+    vol_size: 30
+  - vol_name: instance_2_vol
+    vol_size: 30
+  - vol_name: demo-03-vol-2
+    vol_size: 10
+
+#Security group
+security_groups:
+  - name: demo_ssh
+    description: "security group for SSH access"
+    protocol: tcp
+    port_range_min: 22
+    port_range_max: 22
+    remote_ip_prefix: 0.0.0.0/0
+  - name: demo_http
+    description: "security group for HTTP"
+    protocol: tcp
+    port_range_min: 80
+    port_range_max: 80
+    remote_ip_prefix: 0.0.0.0/0
+  - name: couchdb
+    description: "security group for couchdb"
+    protocol: tcp
+    port_range_min: 9100
+    port_range_max: 9200
+    remote_ip_prefix: 0.0.0.0/0
+  - name: 4396
+    description: "security group for couchdb cluster setup"
+    protocol: tcp
+    port_range_min: 4396
+    port_range_max: 4396
+    remote_ip_prefix: 0.0.0.0/0
+  - name: 5984
+    description: "security group for couchdb cluster setup"
+    protocol: tcp
+    port_range_min: 5984
+    port_range_max: 5984
+    remote_ip_prefix: 0.0.0.0/0
+  - name: 5986
+    description: "security group for couchdb cluster setup"
+    protocol: tcp
+    port_range_min: 5986
+    port_range_max: 5986
+    remote_ip_prefix: 0.0.0.0/0
+
+# instance
+instances:
+  - name: instance0
+    volumes: ['demo-vol-2-1']
+  - name: instance1
+    volumes: ['demo-vol-1-2']
+  - name: instance2
+    volumes: ['demo-vol-1-1']
+
+
+
+# couchdb user and password
+username: admin
+password: 123456
